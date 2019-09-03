@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>&nbsp;</title>
+    <script>(function(doc,win){var docEl=doc.documentElement,resizeEvt='orientationchange'in window?'orientationchange':'resize',recalc=function(){var clientWidth=docEl.clientWidth;if(!clientWidth)return;docEl.style.fontSize=20*(clientWidth/375)+'px';if(window.innerHeight/window.innerWidth>1.8){document.body.className='isIphone'}else{document.body.className=''}};if(!doc.addEventListener)return;win.addEventListener(resizeEvt,recalc,false);doc.addEventListener('DOMContentLoaded',recalc,false)})(document,window);</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" integrity="sha256-XwfUNXGiAjWyUGBhyXKdkRedMrizx1Ejqo/NReYNdUE=" crossorigin="anonymous" />
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/EaselJS/1.0.2/easeljs.min.js" integrity="sha256-m4ldXda61DCZVuvCEAAZeHlAsDkeMEMtrH68df1sxME=" crossorigin="anonymous"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/PreloadJS/1.0.1/preloadjs.min.js" integrity="sha256-ZZq6dK95V2jZ2NLtaI5JzV9H2UJdWhYwMpqEV1m0WR0=" crossorigin="anonymous"></script>-->
+<!--    <link rel="stylesheet" href="app_super__css?{$V}">-->
+<!--    <script src="app_super__indexJs?{$V}"></script>-->
+    <script src="js/easeljs.js"></script>
+    <script src="js/preloadjs.min.js"></script>
+    <script src="js/game.js"></script>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <!--选择页面-->
+    <div class="select_poster_wrap select_page page">
+        <div class="swiper-container select_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/choose_1.png" class="choose_item" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/choose_2.png" class="choose_item" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/choose_3.png" class="choose_item" alt="">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <img src="images/choose_submit.png" class="choose_submit" alt="">
+
+        <!--加载页面-->
+        <div class="page load_page">
+            <div class="progress-div">
+                <div class="progress-image">
+                    <div class="progress" id="progress">
+                        <img src="images/loading_resource_image_value.png" alt="">
+                    </div>
+                    <img src="images/loading_resource_image.png" class="loading_resource_image" alt="">
+                </div>
+                <img src="images/loading_resource_text.png" class="loading_resource_text" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="page game_page">
+        <div class="page page_guide">
+            <img src="images/guide_1.png" class="guide_1 guide isShow" alt="">
+            <img src="images/guide_2.png" class="guide_2 guide" alt="">
+            <img src="images/guide_3.png" class="guide_3 guide" alt="">
+            <img src="images/guide_4.png" class="guide_4 guide" alt="">
+            <img src="images/guide_close.png" class="guide_close" alt="">
+        </div>
+        <canvas id="game" width="640" height="1128"></canvas>
+        <div class="poster_wrap">
+            <img src="images/canvas_1_2.png" id="poster">
+            <img src="images/result_again.png" class="result_again" alt="">
+        </div>
+    </div>
+<!--<button id="change">change</button>-->
+</body>
+</html>

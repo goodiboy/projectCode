@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width" user-scalable="0">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            height: 100vh;
+            overflow: hidden;
+            padding:0;
+        }
+        #canvas{
+            height: 100vh;
+            width:100%;
+            pointer-events: none;
+            /*background: pink;*/
+        }
+
+        
+
+        /*loading*/
+
+        #loading{
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width:100%;
+            z-index: 99999999;
+            background: #fff;
+        }
+
+
+        #circularG{
+            position:absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width:58px;
+            height:58px;
+            margin: auto;
+        }
+
+        .circularG{
+            position:absolute;
+            background-color:rgb(0,0,0);
+            width:14px;
+            height:14px;
+            border-radius:9px;
+                -o-border-radius:9px;
+                -ms-border-radius:9px;
+                -webkit-border-radius:9px;
+                -moz-border-radius:9px;
+            animation-name:bounce_circularG;
+                -o-animation-name:bounce_circularG;
+                -ms-animation-name:bounce_circularG;
+                -webkit-animation-name:bounce_circularG;
+                -moz-animation-name:bounce_circularG;
+            animation-duration:1.1s;
+                -o-animation-duration:1.1s;
+                -ms-animation-duration:1.1s;
+                -webkit-animation-duration:1.1s;
+                -moz-animation-duration:1.1s;
+            animation-iteration-count:infinite;
+                -o-animation-iteration-count:infinite;
+                -ms-animation-iteration-count:infinite;
+                -webkit-animation-iteration-count:infinite;
+                -moz-animation-iteration-count:infinite;
+            animation-direction:normal;
+                -o-animation-direction:normal;
+                -ms-animation-direction:normal;
+                -webkit-animation-direction:normal;
+                -moz-animation-direction:normal;
+        }
+
+        #circularG_1{
+            left:0;
+            top:23px;
+            animation-delay:0.41s;
+                -o-animation-delay:0.41s;
+                -ms-animation-delay:0.41s;
+                -webkit-animation-delay:0.41s;
+                -moz-animation-delay:0.41s;
+        }
+
+        #circularG_2{
+            left:6px;
+            top:6px;
+            animation-delay:0.55s;
+                -o-animation-delay:0.55s;
+                -ms-animation-delay:0.55s;
+                -webkit-animation-delay:0.55s;
+                -moz-animation-delay:0.55s;
+        }
+
+        #circularG_3{
+            top:0;
+            left:23px;
+            animation-delay:0.69s;
+                -o-animation-delay:0.69s;
+                -ms-animation-delay:0.69s;
+                -webkit-animation-delay:0.69s;
+                -moz-animation-delay:0.69s;
+        }
+
+        #circularG_4{
+            right:6px;
+            top:6px;
+            animation-delay:0.83s;
+                -o-animation-delay:0.83s;
+                -ms-animation-delay:0.83s;
+                -webkit-animation-delay:0.83s;
+                -moz-animation-delay:0.83s;
+        }
+
+        #circularG_5{
+            right:0;
+            top:23px;
+            animation-delay:0.97s;
+                -o-animation-delay:0.97s;
+                -ms-animation-delay:0.97s;
+                -webkit-animation-delay:0.97s;
+                -moz-animation-delay:0.97s;
+        }
+
+        #circularG_6{
+            right:6px;
+            bottom:6px;
+            animation-delay:1.1s;
+                -o-animation-delay:1.1s;
+                -ms-animation-delay:1.1s;
+                -webkit-animation-delay:1.1s;
+                -moz-animation-delay:1.1s;
+        }
+
+        #circularG_7{
+            left:23px;
+            bottom:0;
+            animation-delay:1.24s;
+                -o-animation-delay:1.24s;
+                -ms-animation-delay:1.24s;
+                -webkit-animation-delay:1.24s;
+                -moz-animation-delay:1.24s;
+        }
+
+        #circularG_8{
+            left:6px;
+            bottom:6px;
+            animation-delay:1.38s;
+                -o-animation-delay:1.38s;
+                -ms-animation-delay:1.38s;
+                -webkit-animation-delay:1.38s;
+                -moz-animation-delay:1.38s;
+        }
+
+
+
+        @keyframes bounce_circularG{
+            0%{
+                transform:scale(1);
+            }
+
+            100%{
+                transform:scale(.3);
+            }
+        }
+
+        @-o-keyframes bounce_circularG{
+            0%{
+                -o-transform:scale(1);
+            }
+
+            100%{
+                -o-transform:scale(.3);
+            }
+        }
+
+        @-ms-keyframes bounce_circularG{
+            0%{
+                -ms-transform:scale(1);
+            }
+
+            100%{
+                -ms-transform:scale(.3);
+            }
+        }
+
+        @-webkit-keyframes bounce_circularG{
+            0%{
+                -webkit-transform:scale(1);
+            }
+
+            100%{
+                -webkit-transform:scale(.3);
+            }
+        }
+
+        @-moz-keyframes bounce_circularG{
+            0%{
+                -moz-transform:scale(1);
+            }
+
+            100%{
+                -moz-transform:scale(.3);
+            }
+        }
+        
+        .btn{
+            position: absolute;
+            z-index: 2;
+            width:8.106667rem;
+            height: 2.794667rem;
+            left:28%;
+            bottom:5%;
+            background: url('http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/btn-back.png?v1')no-repeat center/cover;
+            /*transition: background .5s;*/
+        }
+
+        .btn.go{
+            width:6.997333rem;
+            height: 2.965333rem;
+            background: url('http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/btn-go.png?v1')no-repeat center/cover;
+        }
+
+        .btn-share{
+            display: none;
+            bottom:20%;
+            width:8.106667rem;
+            height: 2.773333rem;
+            background: url('http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/btn-share.png?v1')no-repeat center/cover;
+        }
+         /*音乐*/
+        .music{
+            position: fixed;
+            top: 3%;
+            right: 5%;
+            width: 10%;
+            z-index: 99999;
+        }
+        .music_bg{
+            position: fixed;
+            top: 1%;
+            right: 0%;
+            width: 16%;
+            z-index: 5;
+        }
+        .music_bg img{
+            width: 100%
+        }
+        .m_active{
+            -webkit-animation: spin 1.5s linear infinite;
+            animation: spin 1.5s linear infinite;
+        }
+        @-webkit-keyframes spin{
+            0%{-webkit-transform: rotate(0deg);}
+            25%{-webkit-transform: rotate(90deg);}
+            50%{-webkit-transform: rotate(180deg);}
+            75%{-webkit-transform: rotate(270deg);}
+            100%{-webkit-transform: rotate(360deg);}
+        }
+        /*音乐结束*/
+        .index_guide{
+            position: fixed;
+            top: 0;
+            left:0;
+            height: 100%;
+            width: 100%;
+            background: url("http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/index.png")no-repeat center/100% 100%;
+            z-index: 9999;
+        }
+        .go_h5{
+            display: none;
+            width: 6.997333rem;
+            height: 2.965333rem;
+            background: url('http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/go_h5.png?v1')no-repeat center/cover;
+        }
+        .index_txt{
+            /*display: block;*/
+            position: absolute;
+            top:10%;
+            left:50%;
+            margin-left: -6.6346665rem;
+            width: 13.269333rem;
+        }
+        .moveUp{
+            -webkit-animation:13s moveUp linear forwards;
+            animation:13s moveUp linear forwards;
+        }
+        @-webkit-keyframes moveUp{
+            0%{
+                top:100%;
+            }
+            100%{
+                top:10%;
+            }
+        }
+        @keyframes moveUp{
+            0%{
+                top:100%;
+            }
+            100%{
+                top:10%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="750" height="1206"></canvas>
+    <div class="btn btn-go go"></div>
+    <div class="btn btn-share"></div>
+    <!-- <img src="http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/btn-share.png?v1" class="btn btn-share"> -->
+    <div class="m_ele">
+        <div class="music_bg" style="display: block;">
+            <img src="http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/music_bg.gif">
+        </div>
+        <div class="music m_active">
+            <img width="100%" src="http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/music_rotate.png">
+        </div>
+        <audio id="audio"  src="http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/bgm.mp3" autoplay="autoplay" loop="loop" preload="auto"></audio>
+    </div>
+    <div class="index_guide">
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/index_txt.png" class="index_txt" alt="">
+        <div class="btn go_h5"></div>
+    </div>
+
+    <div id="loading">
+        <div id="circularG">
+            <div id="circularG_1" class="circularG"></div>
+            <div id="circularG_2" class="circularG"></div>
+            <div id="circularG_3" class="circularG"></div>
+            <div id="circularG_4" class="circularG"></div>
+            <div id="circularG_5" class="circularG"></div>
+            <div id="circularG_6" class="circularG"></div>
+            <div id="circularG_7" class="circularG"></div>
+            <div id="circularG_8" class="circularG"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="InitCanvas.js"></script>
+    <script>
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+        };
+
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+
+    var pip = null;
+    (function () {
+        function isArray(obj) {
+            return Object.prototype.toString.call(obj) === '[object Array]';
+        }
+        var loader = function (imgList, callback, timeout) {
+            timeout = timeout || 5000;
+            imgList = isArray(imgList) && imgList || [];
+            callback = typeof(callback) === 'function' && callback;
+
+            var total = imgList.length,
+                loaded = 0,
+                imgages = [],
+                _on = function () {
+                    loaded < total && (++loaded, callback && callback(loaded / total));
+                };
+
+            if (!total) {
+                return callback && callback(1);
+            }
+
+            // 循环全部图片，图片加载完之后执行百分比统计
+            for (var i = 0; i < total; i++) {
+                imgages[i] = new Image();
+                imgages[i].src = imgList[i];
+                imgages[i].onload = imgages[i].onerror = _on;
+                
+            }
+
+            /**
+             * 如果timeout * total时间范围内，仍有图片未加载出来（判断条件是loaded < total），通知外部环境所有图片均已加载
+             * 目的是避免用户等待时间过长
+             */
+            setTimeout(function () {
+                loaded < total && (loaded = total, callback && callback(loaded / total));
+            }, timeout * total);
+
+        };
+
+        "function" === typeof define && define.cmd ? define(function () {
+            return loader
+        }) : window.imgLoader = loader;
+    })();
+
+    var images = [];
+    //获取页面中的所有img
+     var imgs = document.images;
+     for (var j = 0; j < imgs.length; j++) {
+      images.push(imgs[j].src);
+     }
+
+
+     
+    console.log(images.length);
+    imgLoader(images, function (percentage) {
+        setTimeout(function(){
+          var percentT = percentage * 100;
+          $('.load-num').html( (parseInt(percentT)) + '%');
+          // 加载完之后隐藏加载层，显示内容
+          if (percentage == 1) {
+              setTimeout(function(){
+                    pip = new PinP(config);
+                    $('#loading').fadeOut();
+                  
+                  
+              },500);
+            }
+        },200)
+    });
+   
+    var config = {
+
+        back : false,   // 画中画的顺序，false为缩小，true为放大
+        during: 220,    // 缩放一副图片需要的时间
+        id : 'canvas',  // canvas的id（canvas的宽高要和图片一致）
+        // 图片位置信息
+        imgArr:[
+            {
+                // 顶部图片
+                imgUrl1:'http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/index1.png?v1',
+                // 底部图片
+                imgUrl2:'http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/index2.png?v1',
+                // 底图目标点的的位置和宽高属性
+                sx : 509,
+                sy : 639,
+                sw : 63,
+                sh : 102,
+                // 顶部图片位置和宽高属性
+                sx2 : 0,
+                sy2 : 0,
+                sw2 : 750,
+                sh2 : 1206,
+            },
+            // {
+            //     imgUrl1:'http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/index2.png?v1',
+            //     imgUrl2:'http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/index3.png?v1',
+            //     sx : 89,
+            //     sy : 534,
+            //     sw : 126,
+            //     sh : 203,
+            //     sx2 : 0,
+            //     sy2 : 0,
+            //     sw2 : 750,
+            //     sh2 : 1206,
+
+            // },
+            {
+                imgUrl1:'http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/index2.png?v1',
+                imgUrl2:'http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/index3.png?v1',
+                sx : 91,
+                sy : 535,
+                sw : 122,
+                sh : 198,
+                sx2 : 0,
+                sy2 : 0,
+                sw2 : 750,
+                sh2 : 1206,
+
+            },
+            {
+                imgUrl1:'http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/index3.png?v1',
+                imgUrl2:'http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/index4.png?v1',
+                sx : 82,
+                sy : 658,
+                sw : 84,
+                sh : 134,
+                sx2 : 0,
+                sy2 : 0,
+                sw2 : 750,
+                sh2 : 1206,
+
+            },
+            {
+                imgUrl1:'http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/index4.png?v1',
+                imgUrl2:'http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/index5.png?v1',
+                sx : 96,
+                sy : 896,
+                sw : 107,
+                sh : 171,
+                sx2 : 0,
+                sy2 : 0,
+                sw2 : 750,
+                sh2 : 1206,
+            },
+            {
+                imgUrl1:'http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/index5.png?v1',
+                imgUrl2:'http://img.wx.xiao-bo.com/z/act/2018-080910/gzl-hzh/index6.png?v1',
+                sx : 69,
+                sy : 601,
+                sw : 86,
+                sh : 133,
+                sx2 : 0,
+                sy2 : 0,
+                sw2 : 750,
+                sh2 : 1206,
+
+            },
+        ]
+    }
+
+    
+    console.log(pip);
+    $('.btn-go').on('mousedown',function(e){
+         $('.btn-share').hide();
+
+        // 开始缩放
+        startPip(pip,function(){
+            console.log('播放完了');
+            var $btn =  $('.btn-go');
+            if ($btn.hasClass('go')){
+                $btn.removeClass('go');
+                $('.btn-share').show();
+            }else{
+                $btn.addClass('go');
+                
+            }
+        });
+        e.preventDefault();
+    });
+
+    $('.btn-share').click(function(){
+        window.location.href = 'http://oauth.wx.xiao-bo.com/z_wx/a_oauth_re.aspx?site_id=gzlfwh&word=act_common_ya20180428';
+    });
+
+    $('.btn-go').on('mouseup',function(){
+        // 停止缩放
+        endPip()
+    });
+
+    // 音乐
+    $(".m_ele").click(function () {
+        if ($(".music").hasClass("m_active")) {
+            $(".music").removeClass("m_active");
+            audio.pause();
+            $(".music_bg").hide();
+        } else {
+            $(".music").addClass("m_active");
+            audio.play();
+            $(".music_bg").show();
+        }
+    });
+    // wx.ready(function () {
+    //     document.getElementById('audio').play();
+    // });
+
+
+    // x.addEventListener("animationend", myStartFunction);
+    setTimeout(function(){
+        $('.go_h5').fadeIn();
+    },10000)
+        
+    </script>
+</body>
+</html>

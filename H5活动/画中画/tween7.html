@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width" user-scalable="0">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            height: 100vh;
+            overflow: hidden;
+        }
+        #canvas{
+            height: 100%;
+            width:100%;
+            /*background: pink;*/
+        }
+        .btn{
+
+            position: absolute;
+            z-index: 2;
+            width:50%;
+            left:25%;
+            bottom:5%;
+        }
+
+        .btn-share{
+            display: none;
+            bottom:20%;
+        }
+        
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="750" height="1206"></canvas>
+        <img src="btn-go.png" class="btn btn-go go" alt="">
+        <img src="btn-share.png" class="btn btn-share" alt="">
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="InitCanvas.js"></script>
+    <script>
+
+
+   
+    var config = {
+
+        back : false,   // 画中画的顺序，false为缩小，true为放大
+        during: 230,    // 缩放一副图片需要的时间
+        id : 'canvas',  // canvas的id（canvas的宽高要和图片一致）
+        // 图片位置信息
+        imgArr:[
+            {
+                // 顶部图片
+                imgUrl1:'index1.png',
+                // 底部图片
+                imgUrl2:'index2.png',
+                // 底图目标点的的位置和宽高属性
+                sx : 511,
+                sy : 638,
+                sw : 62,
+                sh : 100,
+                // 顶部图片位置和宽高属性
+                sx2 : 0,
+                sy2 : 0,
+                sw2 : 750,
+                sh2 : 1206,
+            },
+            {
+                imgUrl1:'index2.png',
+                imgUrl2:'index3.png',
+                sx : 89,
+                sy : 534,
+                sw : 126,
+                sh : 203,
+                sx2 : 0,
+                sy2 : 0,
+                sw2 : 750,
+                sh2 : 1206,
+
+            },
+            {
+                imgUrl1:'index3.png',
+                imgUrl2:'index4.png',
+                sx : 82,
+                sy : 658,
+                sw : 83,
+                sh : 134,
+                sx2 : 0,
+                sy2 : 0,
+                sw2 : 750,
+                sh2 : 1206,
+
+            },
+            {
+                imgUrl1:'index4.png',
+                imgUrl2:'index5.png',
+                sx : 96,
+                sy : 895,
+                sw : 106,
+                sh : 170,
+                sx2 : 0,
+                sy2 : 0,
+                sw2 : 750,
+                sh2 : 1206,
+
+            },
+            {
+                imgUrl1:'index5.png',
+                imgUrl2:'index6.png',
+                sx : 69,
+                sy : 602,
+                sw : 83,
+                sh : 134,
+                sx2 : 0,
+                sy2 : 0,
+                sw2 : 750,
+                sh2 : 1206,
+
+            }
+
+        ]
+    }
+
+    var pip = new PinP(config);
+    console.log(pip); 
+    $('.btn-go').on('touchstart mousedown',function(e){
+         $('.btn-share').hide();
+
+        // 开始缩放
+        startPip(pip,function(){
+            console.log('播放完了');
+            var $btn =  $('.btn-go');
+            if ($btn.hasClass('go')){
+                $btn.removeClass('go');
+                $('.btn-share').show();
+                $btn.attr('src','btn-back.png');
+            }else{
+                $btn.addClass('go');
+                $btn.attr('src','btn-go.png');
+            }
+        });
+         e.preventDefault();
+    });
+
+
+
+
+
+
+
+    $('.btn').on('touchend mouseup touchcancel',function(){
+        // 停止缩放
+        endPip();
+    });
+        
+    </script>
+</body>
+</html>

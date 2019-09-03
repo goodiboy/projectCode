@@ -1,0 +1,73 @@
+<script src="http://img.wx.xiao-bo.com/z/act/2019-010203/gzl-yxty/easeljs.min.js"></script>
+<script src="http://img.wx.xiao-bo.com/z/act/2019-010203/gzl-yxty/tweenjs.min.js"></script>
+
+<div class="container">
+    <!-- 音乐 -->
+    <audio src="http://img.wx.xiao-bo.com/z/act/2019-010203/gzl-yxty/bgmusic.mp3" id="bgMusic" preload="true" loop ></audio>
+    <script>
+        wx.ready(function () {
+            document.getElementById('bgMusic').play();
+        });
+    </script>
+    <!-- 主页 -->
+    <div class="page-index" style="display: block">
+        <div id="music-icon"></div>
+        <img src="http://img.wx.xiao-bo.com/z/act/2019-010203/gzl-yxty/logo.png" class="logo" alt="">
+        <img src="http://img.wx.xiao-bo.com/z/act/2019-010203/gzl-yxty/btn-rule.png" class="btn-rule" alt="">
+        <img src="http://img.wx.xiao-bo.com/z/act/2019-010203/gzl-yxty/title.png" class="title" alt="">
+        <div class="count-bar">剩余游戏次数：<span class="count"></span></div>
+        <img src="http://img.wx.xiao-bo.com/z/act/2019-010203/gzl-yxty/btn-start.png" class="btn-start" alt="">
+    </div>
+    <!-- 游戏页 -->
+    <div class="page-game" style="display:none;">
+        <div class="game-info">
+            <div class="avatar-wrap">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-010203/gzl-yxty/avatar.png" class="avatar" alt="">
+            </div>
+            <div class="score-wrap"><span id="score">0</span>分</div>
+            <div class="time-wrap">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-010203/gzl-yxty/clock.png" class="clock" alt="">
+                <div class="downTime-wrap">
+                    <span id="second"></span>:<span id="millisecond"></span>
+                </div>
+            </div>
+            <img src="http://img.wx.xiao-bo.com/z/act/2019-010203/gzl-yxty/logo.png" class="logo" alt="">
+        </div>
+        <canvas id="game-view" width="750" height="1206"></canvas>
+        <!-- 提示图片 -->
+        <img src="http://img.wx.xiao-bo.com/z/act/2019-010203/gzl-yxty/tips-mask.png" class="tips-mask" alt="">
+
+        <!-- 结果 -->
+        <div class="result-mask mask" style="display: none">
+            <div class="result-cont bounceIn">
+                <div class="avatar-wrap">
+                    <img src="http://img.wx.xiao-bo.com/z/act/2019-010203/gzl-yxty/avatar.png" class="avatar" alt="">
+                </div>
+                <div class="result-item">你的成绩为：<span id="result-score"></span> 分</div>
+                <div class="result-item">最佳成绩为：<span id="best-score"></span> 分</div>
+                <div class="result-item">剩余游戏机会：<span class="count"></span> 次</div>
+                <!-- 底部小字提示 -->
+                <div class="static-tips">
+                    把好运汤圆分享给家人和朋友<br>
+                    可以再增加 <span>10</span> 次游戏机会哦！
+                </div>
+                <div class="result-btn">
+                    <span id="btn-restart"></span>
+                    <span class="btn-share"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 活动说明 -->
+    <div class="mask rule-mask">
+        <div class="rule-cont bounceIn">
+            <img src="http://img.wx.xiao-bo.com/z/act/2019-010203/gzl-yxty/ok_close.png" class="ok_close" alt="">
+        </div>
+    </div>
+
+    <!-- 我也要 -->
+    <div class="page_affirm" style="display: none;">
+        <img class="qr_code" src="http://img.wx.xiao-bo.com/z/act/2019-010203/gzl-yxty/qr_code.png"/>
+    </div>
+</div>

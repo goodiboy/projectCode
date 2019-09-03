@@ -1,0 +1,1694 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+.bg-style {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+img {
+  position: absolute;
+  display: block;
+  width: 100%;
+}
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+.logo {
+  width: 7.05rem;
+  left: 1.625rem;
+  top: 0.975rem;
+}
+.gif_png {
+  position: absolute;
+  width: 3.53125rem;
+  height: 4.75rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.gif_png.isMove {
+  -webkit-animation: png_gif steps(3) infinite 0.55s;
+  -o-animation: png_gif steps(3) infinite 0.55s;
+  animation: png_gif steps(3) infinite 0.55s;
+}
+.gif_png.man1 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/man1_gif.png");
+}
+.gif_png.girl1 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/girl1_gif.png");
+}
+.page {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: no-repeat center / 100% auto;
+}
+.page1 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p1-bg1.png");
+}
+.page1 .bottom-btns {
+  left: 8.175rem;
+  top: 18.225rem;
+}
+.page2,
+.page3 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p2-bg.png");
+}
+.p1-main {
+  position: absolute;
+  left: 0;
+  top: 27.28026534%;
+  width: 18.75rem;
+  height: 21.925rem;
+  background: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p1-main1.png") no-repeat center / cover;
+}
+.p1-main .projection-box {
+  position: absolute;
+  top: 10.975rem;
+  left: 2.575rem;
+  width: 13.6rem;
+  height: 5.475rem;
+}
+.p1-main .projection-box .projection {
+  display: none;
+  position: absolute;
+  width: 8.125rem;
+  height: 1.975rem;
+  left: 3rem;
+  top: 2.2rem;
+  background: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p1-projection-img.png") repeat-x 0 0 / cover;
+  z-index: 2;
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.p1-main .projection-box .pro-hight {
+  opacity: 0;
+  top: -0.6rem;
+  left: -0.35rem;
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.p1-main .projection-box .timg {
+  display: none;
+  position: absolute;
+  width: 8.125rem;
+  height: 3.975rem;
+  left: 2.8rem;
+  top: 0.6rem;
+  z-index: 1;
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.p1-man-wrap img {
+  display: none;
+  width: 0.675rem;
+}
+.p1-man1 {
+  left: 6.3rem;
+  top: 18.5rem;
+}
+.p1-man2 {
+  left: 1.875rem;
+  top: 14.2rem;
+}
+.p1-man3 {
+  left: 14.75rem;
+  top: 7.075rem;
+}
+.p1-man4 {
+  left: 7.4rem;
+  top: 9rem;
+}
+.p1-man5 {
+  left: 14.225rem;
+  top: 2.4rem;
+}
+.title1 {
+  width: 12.075rem;
+  left: 1.9rem;
+  top: 5.47263682%;
+}
+.title2 {
+  width: 16.325rem;
+  left: 0.85rem;
+  top: 10.53067993%;
+}
+.flag-left {
+  width: 4.075rem;
+  left: 0;
+  top: 0;
+}
+.flag-right {
+  right: 0;
+  top: 0;
+  width: 6rem;
+}
+.ballute {
+  width: 1.95rem;
+  right: 0.575rem;
+  top: 21.64179104%;
+  -webkit-animation: ballute 1s linear infinite alternate;
+  -o-animation: ballute 1s linear infinite alternate;
+  animation: ballute 1s linear infinite alternate;
+}
+.hight {
+  -webkit-animation: hight 1s infinite linear alternate;
+  -o-animation: hight 1s infinite linear alternate;
+  animation: hight 1s infinite linear alternate;
+}
+.hight1 {
+  width: 0.8rem;
+  left: 6.1rem;
+  top: 0.95rem;
+}
+.hight2 {
+  width: 0.6rem;
+  top: 1.725rem;
+  left: 8.75rem;
+}
+.hight3 {
+  width: 0.8rem;
+  left: 11.525rem;
+  top: 0.95rem;
+}
+.bottom-btns {
+  display: none;
+  position: absolute;
+  left: 8.175rem;
+  bottom: 0rem;
+  text-align: center;
+  font-size: 0.6rem;
+  color: #fff;
+}
+.bottom-btns .btn-start {
+  pointer-events: none;
+  position: static;
+  display: block;
+  width: 1.2rem;
+  margin: 0 auto 0.7rem;
+  -webkit-animation: ani-finger 1s infinite both;
+  animation: ani-finger 1s infinite both;
+}
+.birthday-wrap {
+  display: none;
+  position: absolute;
+  top: 18.98839138%;
+  width: 100%;
+  left: 0;
+  text-align: center;
+}
+.birthday-wrap .birthday {
+  display: block;
+  color: #ff3600;
+  font-size: 1.55rem;
+  margin-bottom: 0.75rem;
+}
+.birthday-wrap .birthday-tips {
+  display: block;
+  font-size: 1.175rem;
+  color: #6e3900;
+}
+.adhesive-wrap {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  width: 100%;
+  height: 12.75rem;
+}
+.adhesive-wrap:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.adhesive-wrap .adhesive-box {
+  background: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/adhesive-wrap1.png") repeat-x left top / contain;
+  padding: 1.1rem 0 1.1rem 1rem;
+  height: 100%;
+  min-width: 100%;
+  float: left;
+  white-space: nowrap;
+  font-size: 0;
+  overflow: hidden;
+}
+.adhesive-wrap .adhesive-item {
+  display: inline-block;
+  width: 16.375rem;
+  height: 100%;
+  margin-right: 0.375rem;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.adhesive-wrap .adhesive-item .adhesive-item-wrap {
+  display: none;
+}
+.adhesive-wrap .adhesive-item.item1 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item1-bg.png");
+  text-align: center;
+}
+.adhesive-wrap .adhesive-item.item1 .item1-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.adhesive-wrap .adhesive-item.item1 .item1-card1 {
+  background: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item1-card1.png") no-repeat center / cover;
+}
+.adhesive-wrap .adhesive-item.item1 .item1-card2 {
+  background: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item1-card2.png") no-repeat center / cover;
+}
+.adhesive-wrap .adhesive-item.item1 .item1-person {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.adhesive-wrap .adhesive-item.item1 .item1-man {
+  background: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item1-man.png") no-repeat center / cover;
+}
+.adhesive-wrap .adhesive-item.item1 .item1-girl {
+  background: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item1-girl.png") no-repeat center / cover;
+}
+.adhesive-wrap .adhesive-item.item1 .item1-gif {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item1-bg.gif") no-repeat center / cover;
+}
+.adhesive-wrap .adhesive-item.item2 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item2-bg.png?v1");
+}
+.adhesive-wrap .adhesive-item.item2 .item2-ele {
+  width: 0.525rem;
+  left: 8.85rem;
+  top: 7rem;
+}
+.adhesive-wrap .adhesive-item.item2 .item2-person {
+  width: 2.75rem;
+  left: 5.075rem;
+  top: 3.25rem;
+}
+.adhesive-wrap .adhesive-item.item2 .item2-ele1 {
+  width: 2.825rem;
+  left: 13.025rem;
+  top: 2rem;
+}
+.adhesive-wrap .adhesive-item.item2 .item2-ele3 {
+  position: absolute;
+  width: 0.75rem;
+  left: 8.73rem;
+  top: 6.85rem;
+}
+.adhesive-wrap .adhesive-item.item2_1 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item2_2-bg.gif");
+}
+.adhesive-wrap .adhesive-item.item3 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item3-bg.png");
+}
+.adhesive-wrap .adhesive-item.item3 .item3-person {
+  width: 3.35rem;
+  left: 7.075rem;
+  top: 1.575rem;
+}
+.adhesive-wrap .adhesive-item.item3 .item3-ele1 {
+  width: 2.6rem;
+  left: 5.325rem;
+  top: 6.975rem;
+}
+.adhesive-wrap .adhesive-item.item3 .item3-ele2 {
+  width: 2.475rem;
+  left: 13.025rem;
+  top: 6.6rem;
+}
+.adhesive-wrap .adhesive-item.item4 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item4-bg.png");
+  /* 圆样式 */
+}
+.adhesive-wrap .adhesive-item.item4 .item4-person3 {
+  width: 2.85rem;
+  left: 4.875rem;
+  top: 4.625rem;
+  z-index: 1;
+}
+.adhesive-wrap .adhesive-item.item4 .item4-person2 {
+  width: 3.225rem;
+  left: 5.95rem;
+  top: 4.975rem;
+  z-index: 2;
+}
+.adhesive-wrap .adhesive-item.item4 .item4-person1 {
+  width: 3.675rem;
+  left: 7.425rem;
+  top: 4.9rem;
+  z-index: 3;
+}
+.adhesive-wrap .adhesive-item.item4 .p4-pre {
+  position: absolute;
+  font-size: 0.5rem;
+  top: 0.7rem;
+  left: 0.45rem;
+  z-index: 4;
+  color: #ff7a41;
+  font-style: inherit;
+  font-weight: bold;
+}
+.adhesive-wrap .adhesive-item.item4 .item4-ele1 {
+  position: absolute;
+  width: 2.575rem;
+  left: 12rem;
+  top: 2.7rem;
+}
+.adhesive-wrap .adhesive-item.item4 .item4-ele3 {
+  width: 1.5rem;
+  right: 0;
+  top: 4.65rem;
+}
+.adhesive-wrap .adhesive-item.item4 .circle-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: 0.25rem solid #ff7a41;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.adhesive-wrap .adhesive-item.item4 .circleProgress_wrapper {
+  width: 2.15rem;
+  height: 2.15rem;
+  position: absolute;
+  left: 12.4rem;
+  top: 2.95rem;
+}
+.adhesive-wrap .adhesive-item.item4 .wrapper {
+  width: 1.075rem;
+  height: 2.15rem;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+.adhesive-wrap .adhesive-item.item4 .right {
+  right: 0;
+}
+.adhesive-wrap .adhesive-item.item4 .left {
+  left: 0;
+}
+.adhesive-wrap .adhesive-item.item4 .circleProgress {
+  width: 2.15rem;
+  height: 2.15rem;
+  border: 0.25rem solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.adhesive-wrap .adhesive-item.item4 .rightcircle {
+  border-top: 0.25rem solid #ffa145;
+  border-right: 0.25rem solid #ffa145;
+  right: 0;
+}
+.adhesive-wrap .adhesive-item.item4 .leftcircle {
+  border-bottom: 0.25rem solid #ffa145;
+  border-left: 0.25rem solid #ffa145;
+  left: 0;
+}
+@-webkit-keyframes circleProgressLoad_right {
+  0% {
+    -webkit-transform: rotate(45deg);
+  }
+  50%,
+  100% {
+    -webkit-transform: rotate(225deg);
+  }
+}
+@-webkit-keyframes circleProgressLoad_left {
+  0%,
+  50% {
+    -webkit-transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(225deg);
+  }
+}
+.adhesive-wrap .adhesive-item.item5 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item5-bg.png");
+}
+.adhesive-wrap .adhesive-item.item5 img {
+  width: 100%;
+  left: 0;
+  top: 0.16rem;
+}
+.adhesive-wrap .adhesive-item.item6 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item6-bg.png");
+}
+.adhesive-wrap .adhesive-item.item6 .item6-ele1 {
+  left: 12.025rem;
+  top: 7.55rem;
+  width: 2.85rem;
+}
+.adhesive-wrap .adhesive-item.item6 .item6-ele2 {
+  width: 1.05rem;
+  top: 0.425rem;
+  left: 11.15rem;
+}
+.adhesive-wrap .adhesive-item.item6 .item6-ele3 {
+  width: 2.95rem;
+  left: 0.725rem;
+  top: 4.475rem;
+  -webkit-animation: move 1s infinite linear alternate;
+  -o-animation: move 1s infinite linear alternate;
+  animation: move 1s infinite linear alternate;
+}
+.adhesive-wrap .adhesive-item.item6 .item6-money {
+  position: absolute;
+  width: 100%;
+  height: 4.225rem;
+  left: 0;
+  top: 0;
+  background: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item6-money.png") repeat-y 0 0 / cover;
+}
+.adhesive-wrap .adhesive-item.item6 .item6-person {
+  left: 0;
+  top: 0;
+}
+.adhesive-wrap .adhesive-item.item7 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item7-bg.png");
+}
+.adhesive-wrap .adhesive-item.item7 ul {
+  position: absolute;
+  left: 7.5rem;
+  top: 3.1rem;
+}
+.adhesive-wrap .adhesive-item.item7 .item7-man {
+  width: 9.95rem;
+  height: 3.625rem;
+  left: 3.5rem;
+  top: 5.575rem;
+}
+.adhesive-wrap .adhesive-item.item7 .item-icon {
+  width: 1.475rem;
+  height: 1.325rem;
+  margin-bottom: 0.23rem;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  -webkit-transition: border-color 0.5s;
+  -moz-transition: border-color 0.5s;
+  -ms-transition: border-color 0.5s;
+  -o-transition: border-color 0.5s;
+  transition: border-color 0.5s;
+}
+.adhesive-wrap .adhesive-item.item7 .item-icon.active {
+  border-color: red;
+}
+.adhesive-wrap .adhesive-item.item7 .item-icon.item7-icon1 {
+  background: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item7-ele1.png") no-repeat center / 1rem;
+}
+.adhesive-wrap .adhesive-item.item7 .item-icon.item7-icon2 {
+  background: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item7-ele2.png") no-repeat center / 1rem;
+}
+.adhesive-wrap .adhesive-item.item7 .item-icon.item7-icon3 {
+  background: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item7-ele3.png") no-repeat center / 0.45rem;
+}
+.adhesive-wrap .adhesive-item.item7 .showActive {
+  position: absolute;
+  width: 1.95rem;
+  height: 1.95rem;
+  top: 3.785rem;
+  left: 11rem;
+  border-radius: 1.95rem;
+  overflow: hidden;
+}
+.adhesive-wrap .adhesive-item.item7 .showActive .show {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 1.95rem;
+}
+.adhesive-wrap .adhesive-item.item7 .showActive .show0 {
+  background: #fff url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item7-ele1.png") no-repeat center / 1.45rem;
+}
+.adhesive-wrap .adhesive-item.item7 .showActive .show1 {
+  background: #fff url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item7-ele2.png") no-repeat center / 1.45rem;
+}
+.adhesive-wrap .adhesive-item.item7 .showActive .show2 {
+  background: #fff url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item7-ele3.png") no-repeat center / 0.65rem;
+}
+.adhesive-wrap .adhesive-item.active .adhesive-item-wrap {
+  display: block;
+}
+.adhesive-wrap .adhesive-item.active .item1-person {
+  -webkit-animation: fadeInRight 0.5s ease backwards;
+  -o-animation: fadeInRight 0.5s ease backwards;
+  animation: fadeInRight 0.5s ease backwards;
+}
+.adhesive-wrap .adhesive-item.active .item1-card {
+  -webkit-animation: zoomIn 0.5s 0.5s ease both;
+  -o-animation: zoomIn 0.5s 0.5s ease both;
+  animation: zoomIn 0.5s 0.5s ease both;
+}
+.adhesive-wrap .adhesive-item.active .item2-person {
+  -webkit-animation: fadeInLeft 0.8s ease backwards;
+  -o-animation: fadeInLeft 0.8s ease backwards;
+  animation: fadeInLeft 0.8s ease backwards;
+}
+.adhesive-wrap .adhesive-item.active .item2-ele,
+.adhesive-wrap .adhesive-item.active .item2-ele3 {
+  -webkit-animation: flash 1.5s infinite;
+  -o-animation: flash 1.5s infinite;
+  animation: flash 1.5s infinite;
+}
+.adhesive-wrap .adhesive-item.active .item2-ele1 {
+  -webkit-animation: flash 1.2s infinite;
+  -o-animation: flash 1.2s infinite;
+  animation: flash 1.2s infinite;
+}
+.adhesive-wrap .adhesive-item.active .item3-person,
+.adhesive-wrap .adhesive-item.active .item5-person {
+  -webkit-animation: fadeIn 1s linear backwards;
+  -o-animation: fadeIn 1s linear backwards;
+  animation: fadeIn 1s linear backwards;
+}
+.adhesive-wrap .adhesive-item.active .item3-ele1 {
+  -webkit-animation: fadeIn 1s 0.5s linear backwards, btn_b_s 1s infinite alternate linear;
+  -o-animation: fadeIn 1s 0.5s linear backwards, btn_b_s 1s infinite alternate linear;
+  animation: fadeIn 1s 0.5s linear backwards, btn_b_s 1s infinite alternate linear;
+}
+.adhesive-wrap .adhesive-item.active .item3-ele2 {
+  -webkit-animation: fadeIn 1s 0.5s linear backwards, move 1s infinite linear alternate;
+  -o-animation: fadeIn 1s 0.5s linear backwards, move 1s infinite linear alternate;
+  animation: fadeIn 1s 0.5s linear backwards, move 1s infinite linear alternate;
+}
+.adhesive-wrap .adhesive-item.active .item4-person3 {
+  -webkit-animation: fadeInLeft 0.5s ease backwards;
+  -o-animation: fadeInLeft 0.5s ease backwards;
+  animation: fadeInLeft 0.5s ease backwards;
+}
+.adhesive-wrap .adhesive-item.active .item4-person2 {
+  -webkit-animation: fadeInLeft 0.5s 0.3s ease backwards;
+  -o-animation: fadeInLeft 0.5s 0.3s ease backwards;
+  animation: fadeInLeft 0.5s 0.3s ease backwards;
+}
+.adhesive-wrap .adhesive-item.active .item4-person1 {
+  -webkit-animation: fadeInLeft 0.5s 0.8s ease backwards;
+  -o-animation: fadeInLeft 0.5s 0.8s ease backwards;
+  animation: fadeInLeft 0.5s 0.8s ease backwards;
+}
+.adhesive-wrap .adhesive-item.active .item4-ele1 {
+  -webkit-animation: fadeIn 1s 0.5s linear backwards;
+  -o-animation: fadeIn 1s 0.5s linear backwards;
+  animation: fadeIn 1s 0.5s linear backwards;
+}
+.adhesive-wrap .adhesive-item.active .item4-ele3 {
+  -webkit-animation: fadeIn 1s 0.2s linear backwards;
+  -o-animation: fadeIn 1s 0.2s linear backwards;
+  animation: fadeIn 1s 0.2s linear backwards;
+}
+.adhesive-wrap .adhesive-item.active .item5-el1 {
+  -webkit-animation: float 1.2s infinite linear alternate;
+  -o-animation: float 1.2s infinite linear alternate;
+  animation: float 1.2s infinite linear alternate;
+}
+.adhesive-wrap .adhesive-item.active .item5-el2 {
+  -webkit-animation: float 1s infinite linear alternate;
+  -o-animation: float 1s infinite linear alternate;
+  animation: float 0.9s infinite linear alternate;
+}
+.adhesive-wrap .adhesive-item.active .item6-ele2 {
+  -webkit-animation: flash 1.2s infinite;
+  -o-animation: flash 1.2s infinite;
+  animation: flash 1.2s infinite;
+}
+.adhesive-wrap .adhesive-item.active .item6-ele1 {
+  -webkit-animation: float 1.2s infinite linear alternate;
+  -o-animation: float 1.2s infinite linear alternate;
+  animation: float 1.2s infinite linear alternate;
+}
+.adhesive-wrap .adhesive-item.active .item6-money {
+  -webkit-animation: fadeIn 0.8s linear backwards, money 1.5s infinite linear;
+  -o-animation: fadeIn 0.8s linear backwards, money 1.5s infinite linear;
+  animation: fadeIn 0.8s linear backwards, money 1.5s infinite linear;
+}
+.adhesive-wrap .adhesive-item.active .item6-person {
+  -webkit-animation: fadeIn 0.8s linear backwards;
+  -o-animation: fadeIn 0.8s linear backwards;
+  animation: fadeIn 0.8s linear backwards;
+}
+@keyframes move {
+  0% {
+    -webkit-transform: translateX(-0.1rem);
+    -moz-transform: translateX(-0.1rem);
+    -ms-transform: translateX(-0.1rem);
+    -o-transform: translateX(-0.1rem);
+    transform: translateX(-0.1rem);
+  }
+  100% {
+    -webkit-transform: translateX(0.1rem);
+    -moz-transform: translateX(0.1rem);
+    -ms-transform: translateX(0.1rem);
+    -o-transform: translateX(0.1rem);
+    transform: translateX(0.1rem);
+  }
+}
+@keyframes money {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 5.225rem;
+  }
+}
+@-webkit-keyframes money {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 5.225rem;
+  }
+}
+.p2-text-list {
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 100%;
+  font-size: 0.75rem;
+  list-style: none;
+}
+.p2-text-list li {
+  position: absolute;
+  font-weight: bold;
+  width: 100%;
+  left: 0;
+  padding: 0 1rem;
+  color: #6e3900;
+  line-height: 1.8;
+  font-style: italic;
+}
+.p2-text-list li strong {
+  color: #ff3600;
+  font-size: 1.2rem;
+}
+.p2-text-list li .thank-text {
+  display: none;
+  margin-top: 0.625rem;
+  color: #c36812;
+  text-align: right;
+}
+.p2-text-list .seal {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.p2-text-list .seal.seal-th {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/seal-th.png");
+}
+.p2-text-list .seal.seal-jy {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/seal-jy.png");
+}
+.keyword-wrap {
+  display: none;
+  -webkit-animation: bounceInRight 1.5s ease backwards;
+  -o-animation: bounceInRight 1.5s ease backwards;
+  animation: bounceInRight 1.5s ease backwards;
+}
+@-webkit-keyframes bounceInRight {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes bounceInRight {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.p2-text-list li .text-item-wrap {
+  display: none;
+}
+.p2-text-list li.active .text-item-wrap {
+  display: block;
+}
+.p2-text-list li.active .text-item-wrap {
+  -webkit-animation: bounceInLeft 0.8s ease backwards;
+  -o-animation: bounceInLeft 0.8s ease backwards;
+  animation: bounceInLeft 1s ease backwards;
+}
+.p2-text-list li.active .thank-text {
+  -webkit-animation: fadeIn 0.8s linear backwards;
+  -o-animation: fadeIn 0.8s linear backwards;
+  animation: fadeIn 0.8s linear backwards;
+}
+.p2-text-list li.active .thank-text.thank-text-first {
+  -webkit-animation: fadeIn 0.8s 1.8s linear backwards;
+  -o-animation: fadeIn 0.8s 1.8s linear backwards;
+  animation: fadeIn 0.8s 1.8s linear backwards;
+}
+.p2-text-list li.active strong.flash {
+  -webkit-animation: flash1 1s 3 backwards linear;
+  -o-animation: flash1 1s 3 backwards linear;
+  animation: flash1 1s 3 backwards linear;
+}
+.p2-text-list li.active .seal {
+  -webkit-animation: seal-ani 0.5s 2s backwards ease;
+  -o-animation: seal-ani 0.5s 2s backwards ease;
+  animation: seal-ani 0.5s 2s backwards ease;
+}
+@keyframes seal-ani {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(5.3, 5.3, 5.3);
+    transform: scale3d(5.3, 5.3, 5.3);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes ani-hight {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 7.725rem;
+  }
+}
+@-webkit-keyframes ani-hight {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 7.725rem;
+  }
+}
+.p2-projection-wrap {
+  position: absolute;
+  width: 11.825rem;
+  height: 8.625rem;
+  left: 0;
+  bottom: 1rem;
+}
+.p2-projection-wrap .p2-projection {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.p2-projection-wrap .p2-projection-hight-wrap {
+  position: absolute;
+  width: 0;
+  top: 0;
+  left: 4.1rem;
+  overflow: hidden;
+}
+.p2-projection-wrap .p2-projection-hight {
+  position: static;
+  width: 7.725rem;
+}
+.p2-projection-wrap .gif_png {
+  display: none;
+  right: 0.5rem;
+  top: 0.6rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: background-image 0.5s;
+  -moz-transition: background-image 0.5s;
+  -ms-transition: background-image 0.5s;
+  -o-transition: background-image 0.5s;
+  transition: background-image 0.5s;
+}
+.p2-projection-wrap .man1 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/man1_gif.png");
+}
+.p2-projection-wrap .man2 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/man2_gif.png");
+}
+.p2-projection-wrap .man3 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/man3_gif.png");
+}
+.p2-projection-wrap .man4 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/man4_gif.png");
+}
+.p2-projection-wrap .man5 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/man5_gif.png");
+}
+.p2-projection-wrap .man6 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/man6_gif.png");
+}
+.p2-projection-wrap .man7 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/man7_gif.png");
+}
+.p2-projection-wrap .man8 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/man8_gif.png");
+}
+.p2-projection-wrap .girl1 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/girl1_gif.png");
+}
+.p2-projection-wrap .girl2 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/girl2_gif.png");
+}
+.p2-projection-wrap .girl3 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/girl3_gif.png");
+}
+.p2-projection-wrap .girl4 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/girl4_gif.png");
+}
+.p2-projection-wrap .girl5 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/girl5_gif.png");
+}
+.p2-projection-wrap .girl6 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/girl6_gif.png");
+}
+.p2-projection-wrap .girl7 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/girl7_gif.png");
+}
+.p2-projection-wrap .girl8 {
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/girl8_gif.png");
+}
+@-webkit-keyframes png_gif {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+@keyframes png_gif {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+.p2-bottom-wrap {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 15.525rem;
+  bottom: 0.65rem;
+}
+.p2-bottom-wrap .p2-bottom-tape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.p2-bottom-wrap .p2-bottom-house {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: 0 0;
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p2-bottom-house.png");
+}
+.ts-wrap {
+  position: absolute;
+  bottom: 3.9rem;
+  left: 0;
+  min-width: 100%;
+  height: 2.325rem;
+  float: left;
+  white-space: nowrap;
+  background: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/ts1.png") repeat-x left top / contain;
+  font-size: 0;
+  -webkit-perspective: 40vw;
+  -moz-perspective: 40vw;
+  -ms-perspective: 40vw;
+  perspective: 40vw;
+  overflow: hidden;
+}
+.ts-wrap .rect {
+  display: inline-block;
+  width: 2.625rem;
+  height: 2.65rem;
+  background: #e0980a;
+  border-right: 0.125rem solid #b64500;
+  transform: rotateX(45deg) translateY(-0.6rem) translateX(-3rem);
+}
+.ts-wrap .rect:nth-child(2n) {
+  background: #c48305;
+}
+.ts-wrap .rect-wrap {
+  position: absolute;
+  left: 0px;
+  top: 0;
+}
+.p3-main {
+  position: relative;
+  width: 16.175rem;
+  height: 12.875rem;
+  padding: 1.875rem 2.75rem 0;
+  left: 1.2875rem;
+  margin-top: 5vh;
+  background: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/last-main-bg.png") no-repeat center / cover;
+  text-align: center;
+}
+.p3-main h3 {
+  color: #6e3900;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+.p3-main i {
+  font-style: normal;
+}
+.p3-main .keyword {
+  position: relative;
+  font-size: 1.5rem;
+  color: #c8152d;
+  margin: 0.75rem 0;
+  font-weight: bold;
+}
+.p3-main .details {
+  font-size: 0.6rem;
+  color: #6e3900;
+}
+.p3-main .icon {
+  width: 1rem;
+  left: 55%;
+  top: -0.5rem;
+}
+.last-btn-ling {
+  display: none;
+  position: relative;
+  width: 11.6rem;
+  margin: 2rem auto 0;
+  z-index: 10;
+}
+.last-ele1 {
+  width: 0.925rem;
+  left: 14.175rem;
+  top: 8.575rem;
+  -webkit-animation: float 1s infinite alternate linear;
+  -o-animation: float 1s infinite alternate linear;
+  animation: float 1s infinite alternate linear;
+}
+.last-ele2 {
+  width: 2.475rem;
+  left: 11.4rem;
+  top: 10.2rem;
+  -webkit-animation: float1 1s infinite alternate linear;
+  -o-animation: float1 1s infinite alternate linear;
+  animation: float1 1s infinite alternate linear;
+}
+.last-ele3 {
+  width: 1.65rem;
+  bottom: 0;
+  right: 0.55rem;
+  -webkit-transform-origin: bottom center;
+  -moz-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  -o-transform-origin: bottom center;
+  transform-origin: bottom center;
+  -webkit-animation: last-rotate1 4s infinite alternate linear;
+  -o-animation: last-rotate1 4s infinite alternate linear;
+  animation: last-rotate1 4s infinite alternate linear;
+}
+.last-ele4 {
+  width: 2.3rem;
+  right: 0.55rem;
+  top: 6.5rem;
+  -webkit-animation: float-left 1s infinite alternate linear;
+  -o-animation: float-left 1s infinite alternate linear;
+  animation: float-left 1s infinite alternate linear;
+}
+.last-ele5 {
+  width: 2.15rem;
+  left: 7.25rem;
+  top: 9.975rem;
+  -webkit-animation: last-rotate 10s infinite linear;
+  -o-animation: last-rotate 10s infinite linear;
+  animation: last-rotate 10s infinite linear;
+}
+.last-ele6 {
+  width: 2.475rem;
+  left: 4.025rem;
+  top: 10.175rem;
+  -webkit-animation: float1 1s infinite alternate linear;
+  -o-animation: float1 1s infinite alternate linear;
+  animation: float1 1s infinite alternate linear;
+}
+@keyframes last-rotate1 {
+  from {
+    transform: rotate(-15deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+}
+@-webkit-keyframes last-rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes last-rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes float1 {
+  from {
+    -webkit-transform: translateY(0.2rem);
+    -moz-transform: translateY(0.2rem);
+    -ms-transform: translateY(0.2rem);
+    -o-transform: translateY(0.2rem);
+    transform: translateY(0.2rem);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes float-left {
+  from {
+    -webkit-transform: translateX(-0.2rem);
+    -moz-transform: translateX(-0.2rem);
+    -ms-transform: translateX(-0.2rem);
+    -o-transform: translateX(-0.2rem);
+    transform: translateX(-0.2rem);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.isIphone .p3-main {
+  margin-top: 9vh;
+}
+.isIphone .p2-bottom-wrap {
+  bottom: 9%;
+}
+.isIphone .adhesive-wrap {
+  top: 12%;
+}
+.isHuaWei .p3-main {
+  margin-top: 0;
+}
+.isHuaWei .adhesive-wrap {
+  top: 0;
+}
+.isHuaWei .p2-text-list {
+  top: 1.6rem;
+}
+/* 活动页动画 */
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.page-active .title1 {
+  -webkit-animation: fadeInLeft 0.5s ease backwards;
+  -o-animation: fadeInLeft 0.5s ease backwards;
+  animation: fadeInLeft 0.5s ease backwards;
+}
+.page-active .title2 {
+  -webkit-animation: fadeInLeft 0.5s 0.3s ease backwards;
+  -o-animation: fadeInLeft 0.5s 0.3s ease backwards;
+  animation: fadeInLeft 0.5s 0.3s ease backwards;
+}
+.page-active .pro-hight {
+  -webkit-animation: flash1 0.5s 1s 2 ease forwards;
+  -o-animation: flash1 0.5s 1s 2 ease forwards;
+  animation: flash1 0.5s 1s 2 ease forwards;
+}
+.page-active .birthday-wrap {
+  display: block;
+  text-align: center;
+  -webkit-animation: fadeIn 1.5s ease backwards;
+  -o-animation: fadeIn 1.5s ease backwards;
+  animation: fadeIn 1.5s ease backwards;
+}
+.page-active .p2-projection-hight-wrap {
+  -webkit-animation: ani-hight 1s 1s linear forwards;
+  -o-animation: ani-hight 1s 1s linear forwards;
+  animation: ani-hight 1s 1s linear forwards;
+}
+@keyframes hight {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.6;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    transform: scale(0.6);
+  }
+}
+/*点击动画*/
+@-webkit-keyframes ani-finger {
+  0% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+  30%,
+  40% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0.92);
+    opacity: 1;
+  }
+  60%,
+  70% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes ani-finger {
+  0% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+  30%,
+  40% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0.92);
+    opacity: 1;
+  }
+  60%,
+  70% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+/*气球动画*/
+@keyframes ballute {
+  0% {
+    -webkit-transform: translate3d(0, -0.3rem, 0);
+    -moz-transform: translate3d(0, -0.3rem, 0);
+    -ms-transform: translate3d(0, -0.3rem, 0);
+    -o-transform: translate3d(0, -0.3rem, 0);
+    transform: translate3d(0, -0.3rem, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0.3rem, 0);
+    -moz-transform: translate3d(0, 0.3rem, 0);
+    -ms-transform: translate3d(0, 0.3rem, 0);
+    -o-transform: translate3d(0, 0.3rem, 0);
+    transform: translate3d(0, 0.3rem, 0);
+  }
+}
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes flash {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  50%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes flash {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  50%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes flash1 {
+  0%,
+  20% {
+    opacity: 1;
+  }
+  50%,
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash1 {
+  0%,
+  20% {
+    opacity: 1;
+  }
+  50%,
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes float {
+  0% {
+    transform: translateY(-0.2rem);
+  }
+  100% {
+    transform: translateY(0.2rem);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(-0.2rem);
+  }
+  100% {
+    transform: translateY(0.2rem);
+  }
+}
+@-webkit-keyframes bounceInLeft {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes bounceInLeft {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* 预加载 */
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p1-bg1.png");
+  z-index: 999999999;
+  text-align: center;
+  color: #6e3900;
+  font-size: 0.8rem;
+}
+#loading .gif_png {
+  position: relative;
+  margin: 0 auto;
+  left: 0.3rem;
+}
+#loading .progress {
+  width: 6rem;
+  height: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  background: #fff;
+  margin: 0 auto 0.3rem;
+  overflow: hidden;
+}
+#loading .progress .bar {
+  height: 100%;
+  width: 0;
+  background: #ff8831;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+}
+#loading .loading-wrap {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 30vh;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes btn_b_s {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@keyframes btn_b_s {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+.audio-icon {
+  position: fixed;
+  right: 1.5%;
+  top: 2%;
+  width: 1.6rem;
+  z-index: 999999;
+}
+.rotate {
+  -webkit-animation: rotate 2s infinite linear;
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=css.css.map */

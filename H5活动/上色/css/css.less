@@ -1,0 +1,215 @@
+@r: 40rem;
+@R: 40rem;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+
+/*选择页面开始*/
+.select_page {
+  display: block;
+  background: url("../images/choose_bg.jpg") no-repeat left top /100% 100%;
+  .flex_center;
+  flex-direction: column;
+}
+
+.select_swiper {
+  width: 100vw;
+  height: 100vw;
+  margin-bottom: 1rem;
+}
+
+.choose_item {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ba6454;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: -.2rem;
+}
+
+.choose_submit {
+  width: 77.8%;
+}
+
+/*选择页面结束*/
+
+
+/*加载图片开始*/
+.load_page {
+  background: rgba(0, 0, 0, .7);
+}
+
+.progress-div {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: auto;
+}
+
+.progress-image {
+  position: relative;
+  width: 11.1%;
+  margin-left: 44.45%;
+}
+
+.progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.loading_resource_text {
+  position: relative;
+  width: 18%;
+  margin-left: 41%;
+  -webkit-animation: animation_shine linear 1s infinite;
+}
+
+@-webkit-keyframes animation_shine {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation_shine {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*加载图片结束*/
+
+
+/*指引页面开始*/
+.page_guide {
+  background: rgba(0, 0, 0, .7);
+
+  .guide {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+    &.isShow {
+      display: block;
+    }
+  }
+
+  .guide_1 {
+    top: 40%;
+  }
+
+  .guide_2 {
+    bottom: 0;
+  }
+
+  .guide_3 {
+    bottom: 13%;
+  }
+
+  .guide_4 {
+    top: 40%;
+  }
+
+  .guide_close {
+    width: 11.4%;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+}
+
+/*指引页面结束*/
+.poster_wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,.7);
+}
+#poster{
+  width: 80%;
+}
+.result_again{
+  margin-top: 1rem;
+  width: 30%;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  //height: 100vh;
+}
+
+#change {
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  z-index: 2;
+}

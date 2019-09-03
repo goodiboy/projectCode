@@ -1,0 +1,525 @@
+@charset "utf-8";
+@r: 40rem;
+@R: 40rem;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  font-family: -apple-system, "PingFang SC", "Helvetica Neue", Helvetica, STHeiTi, microsoft yahei, arial, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  min-height: 100vh;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none
+}
+
+ul, ol {
+  list-style: none
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.page, #game, .gameBg, .start, .guide_mask, .success_mask,.share_mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+/*游戏页面开始*/
+#game, .gameBg, .start {
+  display: block;
+}
+
+.guide_mask {
+  z-index: 9;
+
+  .guide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 675/@r;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .btn_know {
+    position: absolute;
+    top: 80vh;
+    left: 209/@r;
+    width: 331/@r;
+  }
+}
+
+/*游戏挑战成功*/
+.success_mask {
+  background: rgba(0, 0, 0, .5);
+  z-index: 99;
+
+  .highlight {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    //-webkit-animation: rotate 3s infinite linear ;
+    //-o-animation: rotate 3s infinite linear ;
+    //animation: rotate 3s infinite linear ;
+  }
+
+  .success_box {
+    position: absolute;
+    width: 750/@r;
+    height: 943/@r;
+    background: url("../images/success_box.png") no-repeat center/cover;
+    z-index: 2;
+    top: 9vh;
+    -webkit-animation: zoomIn .5s ease backwards;
+    -o-animation: zoomIn .5s ease backwards;
+    animation: zoomIn .5s ease backwards;
+    .main_box {
+      position: absolute;
+      width: 512/@r;
+      height: 420/@r;
+      //background: red;
+      left: 2.93rem;
+      top: 11.4rem;
+      font-size: 28/@r;
+      color: #333;
+      padding: 40/@r 90/@r;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      line-height: 52/@r;
+
+      p {
+        margin-bottom: .8rem;
+      }
+
+      strong {
+        font-size: 48/@r;
+        color: #ec2f25;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes rotate {
+  to{
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+@keyframes rotate {
+  to{
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+.btn_close {
+  position: absolute;
+  width: 61/@r;
+  top: 176/@r;
+  left: 616/@r;
+}
+
+#game {
+  z-index: 3;
+}
+
+.gameBg {
+  z-index: 1;
+}
+
+.start {
+  z-index: 2;
+}
+
+.start1 {
+  -webkit-animation: fadeIn 1s infinite linear alternate;
+  -o-animation: fadeIn 1s infinite linear alternate;
+  animation: fadeIn 1s infinite linear alternate;
+}
+
+.start2 {
+  -webkit-animation: fadeIn 1s .5s infinite linear alternate;
+  -o-animation: fadeIn 1s .5s infinite linear alternate;
+  animation: fadeIn 1s 1s infinite linear alternate;
+}
+
+/*游戏页面结束*/
+
+/*主页开始*/
+.pageIndex, .pageFriend {
+  background: url("../images/index_bg.png") no-repeat left top /100% 100%;
+}
+
+.moon {
+  position: absolute;
+  width: 223/@r;
+  left: 0;
+  top: 0;
+}
+
+.laba {
+  position: absolute;
+  top: 33/@r;
+  right: 15/@r;
+  width: 98/@r;
+  height: 77/@r;
+  background: url("../images/laba.png") no-repeat center/cover;
+
+  .labe_e {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-animation: flash .8s infinite linear;
+    -o-animation: flash .8s infinite linear;
+    animation: flash .8s infinite linear;
+  }
+}
+
+@keyframes flash {
+  0%, 50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes flash {
+  0%, 50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+.logo {
+  position: absolute;
+  width: 115/@r;
+  left: 34/@r;
+  top: 48/@r;
+}
+
+.title {
+  position: absolute;
+  width: 575/@r;
+  top: 76/1206*100vh;
+  left: 112/@r;
+  -webkit-animation: zoomIn .8s ease backwards;
+  -o-animation: zoomIn .8s ease backwards;
+  animation: zoomIn .8s ease backwards;
+}
+
+.decorate {
+  position: absolute;
+  top: 346/1206*100vh;
+  width: 100%;
+  left: 0;
+  -webkit-animation: ani_move 1s infinite linear alternate;
+  -o-animation: ani_move 1s infinite linear alternate;
+  animation: ani_move 1s infinite linear alternate;
+}
+
+@keyframes ani_move {
+  from {
+    -webkit-transform: translateY(-.3rem);
+    -moz-transform: translateY(-.3rem);
+    -ms-transform: translateY(-.3rem);
+    -o-transform: translateY(-.3rem);
+    transform: translateY(-.3rem);
+  }
+  to {
+    -webkit-transform: translateY(.3rem);
+    -moz-transform: translateY(.3rem);
+    -ms-transform: translateY(.3rem);
+    -o-transform: translateY(.3rem);
+    transform: translateY(.3rem);
+  }
+}
+
+@-webkit-keyframes ani_move {
+  from {
+    -webkit-transform: translateY(-.3rem);
+    -moz-transform: translateY(-.3rem);
+    -ms-transform: translateY(-.3rem);
+    -o-transform: translateY(-.3rem);
+    transform: translateY(-.3rem);
+  }
+  to {
+    -webkit-transform: translateY(.3rem);
+    -moz-transform: translateY(.3rem);
+    -ms-transform: translateY(.3rem);
+    -o-transform: translateY(.3rem);
+    transform: translateY(.3rem);
+  }
+}
+
+@-webkit-keyframes ani_move1 {
+  from {
+    -webkit-transform: translateX(-.3rem);
+    -moz-transform: translateX(-.3rem);
+    -ms-transform: translateX(-.3rem);
+    -o-transform: translateX(-.3rem);
+    transform: translateX(-.3rem);
+  }
+  to {
+    -webkit-transform: translateX(.3rem);
+    -moz-transform: translateX(.3rem);
+    -ms-transform: translateX(.3rem);
+    -o-transform: translateX(.3rem);
+    transform: translateX(.3rem);
+  }
+}
+
+@keyframes ani_move1 {
+  from {
+    -webkit-transform: translateX(-.3rem);
+    -moz-transform: translateX(-.3rem);
+    -ms-transform: translateX(-.3rem);
+    -o-transform: translateX(-.3rem);
+    transform: translateX(-.3rem);
+  }
+  to {
+    -webkit-transform: translateX(.3rem);
+    -moz-transform: translateX(.3rem);
+    -ms-transform: translateX(.3rem);
+    -o-transform: translateX(.3rem);
+    transform: translateX(.3rem);
+  }
+}
+
+.act_time {
+  position: absolute;
+  width: 374/@r;
+  left: 202/@r;
+  top: 552/1206*100vh;
+}
+
+.ship {
+  position: absolute;
+  width: 673/@r;
+  left: 40/@R;
+  top: 16rem;
+  -webkit-animation: ani_move1 .8s infinite linear alternate;
+  -o-animation: ani_move1 .8s infinite linear alternate;
+  animation: ani_move1 .8s infinite linear alternate;
+}
+
+.btn_start {
+  position: absolute;
+  top: 1055/@r;
+  left: 210/@r;
+  width: 344/@r;
+  -webkit-animation: tada 1.2s infinite linear;
+  -o-animation: tada 1.2s infinite linear;
+  animation: tada 1.2s infinite linear;
+}
+
+.isIphone {
+  .title {
+    top: 12.301824vh;
+  }
+
+  .act_time {
+    top: 47.771144vh;
+  }
+
+  .ship {
+    top: 20.5rem;
+  }
+
+  .btn_start {
+    top: 31.375rem;
+  }
+
+  .bottom_btn {
+    top: 31.375rem;
+  }
+  .pageRank .btn_continue{
+    top: 80vh;
+  }
+}
+
+/*主页结束*/
+
+/*好友页开始*/
+.friend_main {
+  position: absolute;
+  top: 0;
+  left: 112/@r;
+  width: 578/@r;
+}
+
+.bottom_btn {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 1055/@r;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 60/@r;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: 296/@r;
+  }
+}
+.share_mask{
+  z-index: 99;
+  background: rgba(0, 0, 0, .5);
+  .share_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 598/@r;
+    -webkit-animation: zoomIn .8s ease backwards;
+    -o-animation: zoomIn .8s ease backwards;
+    animation: zoomIn .8s ease backwards;
+  }
+}
+
+
+/*好友页结束*/
+
+/*排行榜开始*/
+.pageRank {
+  z-index: 9999;
+  background: rgba(0, 0, 0, .5);
+
+  .rank_box {
+    position: absolute;
+    top: 7vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: url("../images/rank_box.png") no-repeat center/cover;
+    width: 598/@r;
+    height: 933/@r;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 400/@r 1.1rem;
+  }
+  /*.rank_main{
+    padding: 0 1.2rem 0 .7rem;
+  }*/
+  .hd_title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 28/@r;
+    padding: 0 1.2rem 0 .5rem;
+    margin-bottom: .3rem;
+  }
+
+  .rank_item {
+    display: flex;
+    align-items: center;
+    height: 100/@r;
+    width: 100%;
+    padding: 0 1.2rem 0 .7rem;
+    justify-content: space-around;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #b9d9e8;
+    &:last-child{
+      border-bottom: 0 none;
+    }
+    &.my_rank{
+      background: #ffc306;
+      border-bottom: 0 none;
+      .rank{
+        color: #ff5454;
+      }
+    }
+  }
+
+  .rank {
+    font-size: 27/@r;
+    color: #333;
+    margin-right: 40/@r;
+  }
+  .top3{
+    width: 40/@r;
+    margin-right: 40/@r;
+  }
+
+  .grade {
+    font-size: 27/@r;
+    color: #333;
+  }
+
+  .user_info {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+  }
+
+  .avatar {
+    width: 74/@r;
+    border-radius: 74/@r;
+    border: 2px solid #fff;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .user_name {
+    font-size: 20/@r;
+    width: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .other_rank{
+    height: 9.7rem;
+    overflow-y: scroll;
+    border-radius: 0 0 29/@r 29/@r;
+  }
+  .btn_continue{
+    position: absolute;
+    width: 297/@r;
+    left: 227/@r;
+    top: 87.318408vh;
+  }
+}
+
+/*排行榜结束*/

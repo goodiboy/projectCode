@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>&nbsp;</title>
+    <script>(function(doc,win){var docEl=doc.documentElement,resizeEvt='orientationchange'in window?'orientationchange':'resize',recalc=function(){var clientWidth=docEl.clientWidth;if(!clientWidth)return;docEl.style.fontSize=20*(clientWidth/375)+'px';if(window.innerHeight/window.innerWidth>1.8){document.body.className='isIphone'}else{document.body.className=''}};if(!doc.addEventListener)return;win.addEventListener(resizeEvt,recalc,false);doc.addEventListener('DOMContentLoaded',recalc,false)})(document,window);</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/easeljs.js"></script>
+    <script src="js/preloadjs.js"></script>
+    <script src="js/tweenjs.js"></script>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <div class="container">
+        <div class="master">
+            <!--主页-->
+            <div class="page pageIndex" style="display: block">
+                <img src="images/moon.png" class="moon" alt="">
+                <div class="laba">
+                    <img src="images/laba_e.png" alt="" class="labe_e">
+                </div>
+                <img src="images/logo1.png" alt="" class="logo">
+                <img src="images/title.png" alt="" class="title">
+                <img src="images/decorate.png" class="decorate" alt="">
+                <img src="images/act_time.png" class="act_time" alt="">
+                <img src="images/ship.png" class="ship" alt="">
+                <img src="images/btn_start.png" class="btn_start" alt="">
+            </div>
+            <!--游戏页-->
+            <div class="page pageGame">
+                <!--<img src="images/music.png" class="music" alt="">-->
+                <!--指引-->
+                <div class="guide_mask" style="display: block">
+                    <img src="images/guide.png" alt="" class="guide">
+                    <img src="images/btn_know.png" class="btn_know" alt="">
+                </div>
+                <script>
+                    document.write('<canvas id="game" width="'+ document.documentElement.clientWidth*2 +'" height="'+ document.documentElement.clientHeight*2 +'"></canvas>')
+                </script>
+                <img class="gameBg" src="images/game_bg.png">
+                <img src="images/start1.png" class="start1 start" alt="">
+                <img src="images/start2.png" class="start2 start" alt="">
+                <!--挑战成功弹窗-->
+                <div class="success_mask">
+                    <!--关闭-->
+                    <img src="images/btn_close.png" class="btn_close" alt="">
+                    <!--光-->
+                    <img src="images/highlight.png" alt="" class="highlight">
+                    <!--主体内容-->
+                    <div class="success_box">
+                        <div class="main_box">
+                            <p>您的成绩为：<strong>350</strong>分<br>成功击败全国90%的玩家</p>
+                            <p>最佳成绩为：<strong>1350</strong>分<br>您的排名为：23位</p>
+                            <p>今天还有 <strong>2</strong> 次游戏机会</p>
+                        </div>
+                    </div>
+                    <div class="bottom_btn">
+                        <img src="images/btn_again.png" class="btn_again" alt="">
+                        <img src="images/btn_rank.png" class="btn_rank" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--好友页-->
+        <div class="page pageFriend">
+            <img src="images/logo.png" alt="" class="logo">
+            <img src="images/friend_main.png" class="friend_main" alt="">
+            <img src="images/decorate.png" class="decorate" alt="">
+            <img src="images/ship.png" class="ship" alt="">
+            <div class="bottom_btn">
+                <img src="images/btn_help.png" class="btn_help" alt="">
+                <img src="images/btn_rank.png" class="btn_rank" alt="">
+            </div>
+            <div class="share_mask">
+                <img src="images/share_img.png" class="share_img" alt="">
+            </div>
+        </div>
+        <!--排行榜-->
+        <div class="page pageRank">
+            <img src="images/btn_close.png" class="btn_close" alt="">
+            <div class="rank_box">
+                <div class="hd_title">
+                    <span>排名</span>
+                    <span>分数</span>
+                </div>
+                <div class="rank_main">
+                    <div class="rank_item my_rank">
+                        <span class="rank">88</span>
+                        <div class="user_info">
+                            <div class="avatar">
+                                <img src="images/ava.png" alt="">
+                            </div>
+                            <span class="user_name">温知夏温知夏</span>
+                        </div>
+                        <span class="grade">1000</span>
+                    </div>
+                    <div class="other_rank">
+                        <div class="rank_item">
+                            <img src="images/no_1.png" class="top3" alt="">
+                            <div class="user_info">
+                                <div class="avatar">
+                                    <img src="images/ava.png" alt="">
+                                </div>
+                                <span class="user_name">温知夏温知夏</span>
+                            </div>
+                            <span class="grade">1000</span>
+                        </div>
+                        <div class="rank_item">
+                            <img src="images/no_2.png" class="top3" alt="">
+                            <div class="user_info">
+                                <div class="avatar">
+                                    <img src="images/ava.png" alt="">
+                                </div>
+                                <span class="user_name">温知夏温知夏</span>
+                            </div>
+                            <span class="grade">1000</span>
+                        </div>
+                        <div class="rank_item">
+                            <img src="images/no_3.png" class="top3" alt="">
+                            <div class="user_info">
+                                <div class="avatar">
+                                    <img src="images/ava.png" alt="">
+                                </div>
+                                <span class="user_name">温知夏温知夏</span>
+                            </div>
+                            <span class="grade">1000</span>
+                        </div>
+                        <div class="rank_item">
+                            <span class="rank">88</span>
+                            <div class="user_info">
+                                <div class="avatar">
+                                    <img src="images/ava.png" alt="">
+                                </div>
+                                <span class="user_name">温知夏温知夏</span>
+                            </div>
+                            <span class="grade">1000</span>
+                        </div>
+                        <div class="rank_item">
+                            <span class="rank">88</span>
+                            <div class="user_info">
+                                <div class="avatar">
+                                    <img src="images/ava.png" alt="">
+                                </div>
+                                <span class="user_name">温知夏温知夏</span>
+                            </div>
+                            <span class="grade">1000</span>
+                        </div>
+                        <div class="rank_item">
+                            <span class="rank">88</span>
+                            <div class="user_info">
+                                <div class="avatar">
+                                    <img src="images/ava.png" alt="">
+                                </div>
+                                <span class="user_name">温知夏温知夏</span>
+                            </div>
+                            <span class="grade">1000</span>
+                        </div>
+                        <div class="rank_item">
+                            <span class="rank">88</span>
+                            <div class="user_info">
+                                <div class="avatar">
+                                    <img src="images/ava.png" alt="">
+                                </div>
+                                <span class="user_name">温知夏温知夏</span>
+                            </div>
+                            <span class="grade">1000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="images/btn_continue.png" class="btn_continue" alt="">
+        </div>
+    </div>
+    <script src="js/game.js"></script>
+</body>
+</html>

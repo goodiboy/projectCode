@@ -1,0 +1,360 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>&nbsp;</title>
+    <script>(function (doc, win) {
+        var docEl = doc.documentElement, resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+                if (window.innerHeight / window.innerWidth > 1.8) {
+                    document.body.className = 'isIphone'
+                } else if (window.innerHeight / window.innerWidth < 1.5) {
+                    document.body.className = 'isHuaWei'
+                } else {
+                    document.body.className = ''
+                }
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false)
+    })(document, window);</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/css.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div id="loading">
+    <!--<div>加载中 <span id="loadNum"></span></div>-->
+    <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/logo.png" class="logo" alt="">
+    <div class="loading-wrap">
+        <div class="gif_png isMove"></div>
+        <div class="progress">
+            <div class="bar"></div>
+        </div>
+        <p>Loading...</p>
+    </div>
+</div>
+<div class="container">
+<!--    <audio src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/xuehua.mp3" id="xuehua" preload="auto" ></audio>-->
+    <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/gzt_dt/audio1.png" class="audio-icon rotate">
+    <audio src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/bgm.mp3" id="bgm" autoplay loop  ></audio>
+    <div class="page page1" style="display: none">
+        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/logo.png" alt="" class="logo">
+        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/flag-left.png" alt="" class="flag-left">
+        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/flag-right.png" alt="" class="flag-right">
+        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/ballute.png" class="ballute" alt="">
+        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/title1.png" class="title1" alt="">
+        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/title2.png" class="title2" alt="">
+        <!--主体内容-->
+        <div class="p1-main">
+            <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/hight.png" alt="" class="hight hight1">
+            <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/hight.png" alt="" class="hight hight2">
+            <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/hight.png" alt="" class="hight hight3">
+            <div class="p1-man-wrap">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p1-man1.png" alt="" class="p1-man1">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p1-man2.png" alt="" class="p1-man2">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p1-man1.png" alt="" class="p1-man3">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p1-man1.png" alt="" class="p1-man4">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p1-man2.png" alt="" class="p1-man5">
+            </div>
+            <div class="projection-box">
+                <div class="projection"></div>
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/timg.gif" class="timg">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p1-projectionHight1.png" alt="" class="pro-hight">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p1-projectionHight2.png" alt="" class="pro-hight">
+            </div>
+            <div class="btn-start-wrap bottom-btns">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/btn-start.png" alt="" class="btn-start">
+                <span>点击开启</span>
+            </div>
+        </div>
+    </div>
+    <div class="page page2 " style="display: none">
+        <!-- 生日快乐 -->
+        <div class="birthday-wrap" style="display: none">
+            <span class="birthday">生日快乐</span>
+            <span class="birthday-tips">小招一直都在</span>
+        </div>
+        <!-- 胶带 -->
+        <div class="adhesive-wrap">
+            <div class="adhesive-box ">
+                <div class="adhesive-item item1 active">
+                    <div class="adhesive-item-wrap">
+                        <div class="item1-person"></div>
+                        <div class="item1-card"></div>
+                    </div>
+                    <!-- <div class="item1-gif"></div> -->
+                </div>
+                <div class="adhesive-item item2 ">
+                    <div class="adhesive-item-wrap">
+
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item2-person.png" class="item2-person" alt="">
+                        <!--<img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item2-ele.png" class="item2-ele" alt="">-->
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item2-ele1.png" class="item2-ele1" alt="">
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item2-ele3.png" class="item2-ele3" alt="">
+                    </div>
+                </div>
+                <div class="adhesive-item item2_1 "></div>
+                <div class="adhesive-item item3 ">
+                    <div class="adhesive-item-wrap">
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item3-ele1.png" class="item3-ele1" alt="">
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item3-ele2.png" class="item3-ele2" alt="">
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item3-person.png" class="item3-person" alt="">
+                    </div>
+                </div>
+                <div class="adhesive-item item4 ">
+                    <div class="adhesive-item-wrap">
+
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item4-person1.png" class="item4-person1" alt="">
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item4-person2.png" class="item4-person2" alt="">
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item4-person2.png" class="item4-person3" alt="">
+                        <div class="circleProgress_wrapper">
+                            <em class="p4-pre" id="p4-pre"></em>
+                            <div class="circle-bg"></div>
+                            <div class="wrapper right">
+                                <div class="circleProgress rightcircle"></div>
+                            </div>
+                            <div class="wrapper left">
+                                <div class="circleProgress leftcircle"></div>
+                            </div>
+                        </div>
+                        <!--<img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item4-ele2.png" class="item4-ele1" alt="">
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item4-ele3.png" class="item4-ele3" alt="">-->
+                    </div>
+                </div>
+                <div class="adhesive-item item5 ">
+                    <div class="adhesive-item-wrap">
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item5-person.png" class="item5-person" alt="">
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item5-el1.png" class="item5-el1" alt="">
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item5-el2.png" class="item5-el2" alt="">
+                    </div>
+
+                </div>
+                <div class="adhesive-item item6 ">
+                    <div class="adhesive-item-wrap">
+                        <div class="item6-money"></div>
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item6-girl.png" alt="" class="item6-person">
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item6-ele1.png" alt="" class="item6-ele1">
+<!--                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item6-ele2.png" alt="" class="item6-ele2">-->
+                        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item6-ele3.png" alt="" class="item6-ele3">
+                    </div>
+
+                </div>
+                <div class="adhesive-item item7 active">
+                    <ul>
+                        <li class="item7-icon1 item-icon active"></li>
+                        <li class="item7-icon2 item-icon"></li>
+                        <li class="item7-icon3 item-icon"></li>
+                    </ul>
+                    <div class="showActive">
+                        <div class="show0 show" style="display: block"></div>
+                        <div class="show1 show"></div>
+                        <div class="show2 show"></div>
+                    </div>
+                    <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/item7-man.gif" class="item7-man" alt="">
+                </div>
+
+                <div class="adhesive-item"></div>
+            </div>
+        </div>
+        <!--关键字-->
+        <div class="keyword-wrap">
+            <div class="p3-main">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/last-ele1.png" class="last-ele1" alt="">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/last-ele2.png" class="last-ele2" alt="">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/last-ele3.png" class="last-ele3" alt="">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/last-ele4.png" class="last-ele4" alt="">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/last-ele5.png" class="last-ele5" alt="">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/last-ele6.png" class="last-ele6" alt="">
+                <div class="last-main-text-wrap">
+                    <h3>你的2019关键词</h3>
+                    <div class="keyword"><i>「</i><span>热血沸腾</span><i>」</i> <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/icon.png" class="icon" alt=""></div>
+                    <p class="details">
+                        成败之间也许就差一腔热血<br>
+                        愿你在前进的道路上愈战愈勇<br>
+                        奋勇直前
+                    </p>
+                </div>
+            </div>
+            <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/last-btn-ling.png" class="last-btn-ling" alt="">
+        </div>
+        <div class="p2-bottom-wrap">
+            <!--背景胶带-->
+            <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p2-bottom-tape.png" class="p2-bottom-tape.png" alt="">
+            <!--房子-->
+            <div class="p2-bottom-house"></div>
+            <!--文字-->
+            <ul class="p2-text-list">
+                <li class="">
+                    <div class="text-item-wrap">
+                        <p class="text-list-p1">招行工资卡已经陪伴你走过了 <strong id="useDate">234</strong> 天，</p>
+                    </div>
+                    <p class="thank-text thank-text-first">感谢一路有你</p>
+                </li>
+                <li class="">
+                    <div class="text-item-wrap">
+                        <p class="text-list-p1">您的发薪日是 <strong id="incomeDate">15</strong> 号，</p>
+                        <p class="text-list-p2">这天可能是您每月最期待最开心的一天</p>
+                    </div>
+                    <p class="thank-text">生活总要有点盼头</p>
+                </li>
+                <li class="">
+                    <div class="text-item-wrap">
+                        <p class="text-list-p1">这一年来您的资产增长了 <strong id="increasePercent">55%</strong> ，</p>
+                        <p class="text-list-p2">还记得最富有的 <strong id="maxMon">1</strong> 月和最奋斗的 <strong id="minMon">12</strong> 月吗？
+                        </p>
+                    </div>
+                    <p class="thank-text text-list-p3">上天永远不会亏待努力的人 </p>
+                </li>
+                <li class="">
+                    <div class="text-item-wrap">
+                        <p class="text-list-p1"><strong id="firstIncomeYear">2019</strong> 年 <strong id="firstIncomeMonth">12</strong> 月 <strong id="firstIncomeDay">1</strong> 日收到了最有意义的第一笔工资，收到工资后花的第一笔钱，花了 <strong id="firstPay">1</strong> 元</p>
+                    </div>
+                    <p class="thank-text text-list-p3">生活总要有点盼头</p>
+                </li>
+                <li class="">
+                    <div class="text-item-wrap">
+                        <p class="text-list-p1">这一年来累计工资收入 <strong id="ttlIncomeFlag">2000</strong> 元</p>
+                        <p class="text-list-p2">工资涨幅 <strong id="wageIncrease">-18%</strong> ，工资超过 <strong id="peerPer">0%</strong> 的同龄人</p>
+                        <div class="seal seal-th"></div>
+                    </div>
+                    <p class="thank-text text-list-p3">即使输在起跑线，也要拼命追赶 </p>
+
+                </li>
+                <li class="">
+                    <div class="text-item-wrap">
+                        <p class="text-list-p1">这一年来最高的一笔工资收入是 <strong id="maxIncome">1500</strong> 元 </p>
+                    </div>
+                    <p class="thank-text text-list-p2">人生新巅峰，暴富指日可待 </p>
+                </li>
+                <li class="">
+                    <div class="text-item-wrap">
+                        <p class="text-list-p1">这一年来累计支出 <strong id="ttlPay">12345</strong> 元，</p>
+                        <p class="text-list-p2"> <strong id="maxPayYear">2019</strong> 年 <strong id="maxPayMonth">1</strong> 月支出了最大一笔金额 <strong id="maxPay">17000</strong> 元</p>
+                    </div>
+                    <p class="thank-text text-list-p3"> <span id="constellation"></span> 真任性</p>
+                </li>
+                <li class="">
+                    <div class="text-item-wrap">
+                        <p class="text-list-p1">你有 <strong id="payCnt">6</strong> 次消费发生在凌晨0点以后</p>
+                    </div>
+                    <p class="thank-text text-list-p2">早睡早起，熬夜对身体真的不好</p>
+                </li>
+            </ul>
+            <!-- 底部地板 -->
+            <div class="ts-wrap">
+                <div class="rect-wrap">
+                    <div class="rect rect1"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect1"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect1"></div>
+                    <div class="rect rect2"></div>
+                </div>
+            </div>
+            <!--投影仪-->
+            <div class="p2-projection-wrap">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p2-projection.png" class="p2-projection" alt="">
+                <div class="p2-projection-hight-wrap">
+                    <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p2-projection-hight.png" class="p2-projection-hight" alt="">
+                </div>
+                <div class="gif_png"></div>
+            </div>
+            <div class="bottom-btns btn-long-tap">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/btn-start.png" alt="" class="btn-start">
+                <span>长按下一章</span>
+            </div>
+        </div>
+    </div>
+    <div class="page page3 " style="display: none">
+        <!-- 生日快乐 -->
+        <div class="birthday-wrap" style="display: none">
+            <span class="birthday">生日快乐</span>
+            <span class="birthday-tips">小招一直都在</span>
+        </div>
+        <!--关键字-->
+        <div class="p3-main">
+            <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/last-ele1.png" class="last-ele1" alt="">
+            <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/last-ele2.png" class="last-ele2" alt="">
+            <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/last-ele3.png" class="last-ele3" alt="">
+            <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/last-ele4.png" class="last-ele4" alt="">
+            <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/last-ele5.png" class="last-ele5" alt="">
+            <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/last-ele6.png" class="last-ele6" alt="">
+            <div class="last-main-text-wrap">
+                <h3>你的2019关键词</h3>
+                <div class="keyword"><i>「</i><span>热血沸腾</span><i>」</i> <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/icon.png" class="icon" alt=""></div>
+                <p class="details">
+                    成败之间也许就差一腔热血<br>
+                    愿你在前进的道路上愈战愈勇<br>
+                    奋勇直前
+                </p>
+            </div>
+        </div>
+        <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/last-btn-ling.png" class="last-btn-ling" alt="">
+        <div class="p2-bottom-wrap">
+            <!--背景胶带-->
+            <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p2-bottom-tape.png" class="p2-bottom-tape.png" alt="">
+            <!--房子-->
+            <div class="p2-bottom-house"></div>
+            <!-- 底部地板 -->
+            <div class="ts-wrap">
+                <div class="rect-wrap">
+                    <div class="rect rect1"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect1"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect2"></div>
+                    <div class="rect rect1"></div>
+                    <div class="rect rect2"></div>
+                </div>
+            </div>
+            <!--投影仪-->
+            <div class="p2-projection-wrap">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p2-projection.png" class="p2-projection" alt="">
+                <div class="p2-projection-hight-wrap">
+                    <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/p2-projection-hight.png" class="p2-projection-hight" alt="">
+                </div>
+                <div class="gif_png"></div>
+            </div>
+            <div class="bottom-btns btn-long-tap">
+                <img src="http://img.wx.xiao-bo.com/z/act/2019-040506/zh-znq/btn-start.png" alt="" class="btn-start">
+                <span>长按下一章</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

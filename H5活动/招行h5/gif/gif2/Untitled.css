@@ -1,0 +1,18 @@
+/* ----------------------------------------------------
+   created with http://www.codeandweb.com/texturepacker 
+   ----------------------------------------------------
+   $TexturePacker:SmartUpdate:fc41284dbe4d318cb85d46f572a253e0:1/1$
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(Untitled.png);}
+
+.男人3_0000_图层-4 {width:226px; height:304px; background-position: -678px -0px}
+.男人3_0001_图层-3 {width:226px; height:304px; background-position: -452px -0px}
+.男人3_0002_图层-2 {width:226px; height:304px; background-position: -226px -0px}
+.男人3_0003_图层-1 {width:226px; height:304px; background-position: -0px -0px}

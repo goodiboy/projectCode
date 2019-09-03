@@ -1,0 +1,586 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  max-width: 100vw;
+  font-size: 0.875rem;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.container {
+  height: 100%;
+}
+/* 主页 */
+.page-index {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/index.png") no-repeat center / cover;
+}
+.page-index .logo {
+  position: absolute;
+  width: 9.49333333rem;
+  left: 0;
+  top: 0.10666667rem;
+}
+.btn-rule {
+  position: absolute;
+  top: 0;
+  right: 0.36266667rem;
+  width: 1.472rem;
+}
+.title {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 16rem;
+  -webkit-animation: bounceInDown 0.8s ease backwards;
+  -o-animation: bounceInDown 0.8s ease backwards;
+  animation: bounceInDown 0.8s ease backwards;
+}
+.count-bar {
+  position: absolute;
+  left: 4.75733333rem;
+  top: 40vh;
+  width: 6.48533333rem;
+  height: 1.17333333rem;
+  line-height: 1.17333333rem;
+  background: #df3429;
+  color: #fff;
+  font-size: 0.64rem;
+  text-align: center;
+  -webkit-border-radius: 0.576rem;
+  -moz-border-radius: 0.576rem;
+  border-radius: 0.576rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0.53333333rem;
+}
+.count-bar .count {
+  color: #fff074;
+  text-align: right;
+}
+.btn-start {
+  position: absolute;
+  bottom: 2vh;
+  left: 3.54133333rem;
+  width: 9.408rem;
+  -webkit-animation: tada 1s 0.5s backwards linear;
+  -o-animation: tada 1s 0.5s backwards linear;
+  animation: tada 1s 0.5s backwards linear;
+}
+/* 游戏页 */
+.page-game {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.game-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.avatar-wrap {
+  position: absolute;
+  left: 0.53333333rem;
+  top: 0.64rem;
+  width: 2.56rem;
+  height: 2.56rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  -webkit-border-radius: 2.56rem;
+  -moz-border-radius: 2.56rem;
+  border-radius: 2.56rem;
+  overflow: hidden;
+}
+.avatar-wrap .avatar {
+  width: 100%;
+}
+.score-wrap {
+  position: absolute;
+  left: 3.47733333rem;
+  top: 1.49333333rem;
+  font-size: 0.512rem;
+  color: #fff;
+}
+#score {
+  margin-right: 0.15rem;
+  color: #e9ffae;
+  font-size: 0.768rem;
+}
+.time-wrap {
+  position: absolute;
+  left: 6.44266667rem;
+  top: 1.344rem;
+  width: 3.11466667rem;
+  height: 2.96533333rem;
+}
+.time-wrap .clock {
+  width: 1.28rem;
+  margin: 0 auto;
+}
+.time-wrap .downTime-wrap {
+  color: #fff;
+  margin-top: 0.32rem;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+.time-wrap .downTime-wrap span {
+  display: inline-block;
+  background: #fff;
+  width: 1.25866667rem;
+  text-align: center;
+  font-size: 0.93866667rem;
+  color: #b9141f;
+  font-weight: bold;
+  line-height: 1.344rem;
+  -webkit-border-radius: 0.21333333rem;
+  -moz-border-radius: 0.21333333rem;
+  border-radius: 0.21333333rem;
+}
+.page-game .logo {
+  width: 60%;
+  position: absolute;
+  left: 20%;
+  top: 17vh;
+}
+#game-view {
+  width: 100%;
+  height: 100%;
+}
+/* 游戏提示 */
+.tips-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+}
+/* 活动说明 */
+.mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+}
+.rule-cont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 10.624rem;
+  height: 13.824rem;
+  background: url("../images/rule-mask.png") no-repeat center / cover;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 11.47733333rem;
+  -webkit-animation: 0.8s ease backwards;
+  -o-animation: 0.8s ease backwards;
+  animation: 0.8s ease backwards;
+}
+.rule-cont .ok_close {
+  margin: 0 auto;
+  width: 6.528rem;
+  -webkit-animation: ripple 0.8s linear 0s infinite alternate;
+  animation: ripple 0.8s linear 0s infinite alternate;
+}
+.result-cont {
+  position: absolute;
+  width: 12.928rem;
+  height: 14.44266667rem;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background: url("../images/result-mask.png") no-repeat center / cover;
+  color: #fff;
+  font-size: 0.768rem;
+  padding-top: 4.90666667rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-animation: 0.8s ease backwards;
+  -o-animation: 0.8s ease backwards;
+  animation: 0.8s ease backwards;
+}
+.result-cont .static-tips {
+  font-size: 0.512rem;
+  padding-top: 0.21333333rem;
+}
+.result-cont .static-tips span {
+  color: #fff697;
+}
+.result-item {
+  margin-bottom: 0.64rem;
+}
+.result-item span {
+  color: #fff697;
+}
+.result-btn {
+  text-align: center;
+  margin-top: 0.68266667rem;
+}
+.result-btn img {
+  display: inline-block;
+  width: 4.352rem;
+  margin: 0 0.21333333rem;
+  -webkit-animation: ripple 0.8s linear 0s infinite alternate;
+  animation: ripple 0.8s linear 0s infinite alternate;
+}
+/*我也要*/
+.page_affirm .qr_code {
+  width: 15.2rem;
+  -webkit-animation: dialogTop 0.6s ease both 1;
+  animation: dialogTop 0.6s ease both 1;
+  margin: 0 auto;
+}
+.qr_code {
+  position: static;
+}
+.qr_code.dOut {
+  -webkit-animation: dialogOut 0.6s ease both 1;
+  animation: dialogOut 0.6s ease both 1;
+}
+.page_affirm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 66;
+}
+@-webkit-keyframes dialogTop {
+  from {
+    -webkit-transform: translate(0, 100px) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes dialogTop {
+  from {
+    transform: translate(0, 100px) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes dialogOut {
+  to {
+    -webkit-transform: translate(0, 100px) scale(0.5);
+    opacity: 0;
+  }
+}
+@keyframes dialogOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translate(0, 100px) scale(0.5);
+    opacity: 0;
+  }
+}
+#share_mask_img {
+  right: 0;
+}
+/*************动画***************/
+@-webkit-keyframes ripple {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.9, 0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes ripple {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.9, 0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+.bounceOutDown {
+  -webkit-animation-name: bounceOutDown;
+  animation-name: bounceOutDown;
+}
+@-webkit-keyframes bounceOutDown {
+  20% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  40%,
+  45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+@keyframes bounceOutDown {
+  20% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  40%,
+  45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+@-webkit-keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+/*# sourceMappingURL=css.css.map */

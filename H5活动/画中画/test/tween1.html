@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width" user-scalable="0">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            height: 100%;
+            overflow: hidden;
+        }
+        #canvas{
+            height: 100%;
+            /*background: pink;*/
+        }
+        .btn{
+            position: absolute;
+            z-index: 2;
+            width:30%;
+            left:40%;
+            bottom:5%;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="750" height="1206"></canvas>
+    <img src="btn.png" class="btn" alt="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+        // requestAnimationFrame兼容写法
+        window.requestAnimationFrame= (function(){
+            return window.requestAnimationFrame ||
+             window.webkitRequestAnimationFrame ||
+              window.mozRequestAnimationFrame ||
+              function(callback){
+                  window.setTimeout(callback, 17);
+              }
+        })();
+        window.cancelAnimationFrame = (function(){
+            return window.cancelAnimationFrame ||
+            window.webkitCancelAnimationFrame ||
+            window.mozCancelAnimationFrame ||
+            function(id){
+                window.clearTimeout(id);
+            }
+        })();
+
+        var easeIn = function(t, b, c, d) {
+              return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
+        }
+        
+
+        var can = document.querySelector('#canvas');
+        var img1 = new Image();
+        img1.src = '1.jpg';
+        // var img2 = new Image();
+        // img2.src = '2.jpg';
+        
+        var ctx = can.getContext('2d');
+        img1.onload = function(){
+            ctx.drawImage(img1,0,0,750,1206); 
+        }
+        
+        
+
+
+       
+        var drawScale = function (data) {
+            this.img1 = new Image();
+            this.img1.src = data.imgUrl1;
+
+            this.img2 = new Image();
+            this.img2.src = data.imgUrl2;
+
+
+            // 大图片老奶奶的位置和宽高属性（小奶奶）
+            this.sx = data.sx;
+            this.sy = data.sy;
+            this.sw = data.sw;
+            this.sh = data.sh;
+
+            // 首页老奶奶的位置和宽高属性（大奶奶）
+            this.sx2 = data.sx2;
+            this.sy2 = data.sy2;
+            this.sw2 = data.sw2;
+            this.sh2 = data.sh2;
+
+            // 计算出大奶奶和小奶奶的宽高比，用来进行同步缩放
+            this.scaW = this.sw2 / this.sw;
+            this.scaH = this.sh2 / this.sh;
+
+             // 求出小奶奶左边和顶部的距离比例
+            this.sca = this.sx/this.sy;
+
+
+            // 求出小奶奶距离底部和距离顶部的比例
+            this.scaleHeight = (this.sh2 - this.sy - this.sh ) / this.sy;
+
+            // 求出小奶奶距离右边和距离左边的比例
+            this.scaleWidth = (this.sw2 - this.sx - this.sw ) / this.sx;
+
+
+            this.scaleLeft = (this.sw2 - this.sx - this.sw ) / (this.sw2  - this.sw );
+
+            this.scaleTop = (this.sh2 - this.sy - this.sh ) / (this.sh2  - this.sh );
+
+
+            console.log(this.scaleWidth);
+            // 绘图
+            this.draw = function (){
+                // 绘制（小奶奶）
+               ctx.drawImage(this.img2,this.sx,this.sy,this.sw,this.sh,0,0,can.width,can.height); 
+                // 绘制（大奶奶）
+               ctx.drawImage(this.img1,this.sx2,this.sy2,this.sw2,this.sh2); 
+            }
+
+            console.log(this.scaW);
+            
+        }
+
+        var draw = function (vx,vy) {
+
+            
+
+            // 如果x轴没有到左上角0 0的位置就进行重绘
+            if (this.sx <= 0){
+                this.sx = 0;
+                this.sw = can.width;
+            }else{
+
+                // 每一帧绘制的x位置根据比例递减
+                this.sx = 511 - vx;
+
+                // 重绘之后的宽度= 原来宽度 + x轴移动的距离 + 小奶奶距离右边和距离左边的比例
+                // scaleWidth也是小奶奶右侧增大的距离
+         
+                this.sw = 62 + vx + this.scaleWidth*vx;
+
+
+
+
+
+                // 重置大奶奶和小奶奶的宽比例，用来进行同步缩放
+                // this.scaW = this.sw2 / this.sw;
+                this.scaW = this.sw / 62;
+
+                // 大奶奶的x轴重置 = 小奶奶x轴移动的距离 * 大奶奶和小奶奶的宽比例
+                // this.sx2 = vx;
+                
+
+
+                // 大奶奶的宽度重置 = 小奶奶x轴移动的距离 * 大奶奶和小奶奶的宽比例
+                // this.sw2 = 750 - ( vx) - vx*this.scaleWidth;
+                this.sw2 = 750 / this.scaW;
+
+                this.sx2 = 750 - this.sw2 - (750 - this.sw2)*this.scaleLeft ;
+                // console.log( this.sw2,this.sw,this.scaW);
+                console.log(this.sx, this.sx2);
+               
+            }
+
+            if (this.sy <= 0){
+                this.sy = 0;
+                this.sh = can.height;
+            }else{
+                // 每一帧绘制的y位置根据比例递减
+                this.sy = (638-vy);
+
+                // scaleHidth也是小奶奶底部增大的距离
+                this.sh = 100 + vy + this.scaleHeight*vy;
+
+
+                this.scaH = this.sh / 100;
+
+                
+
+                // this.sh2 = 1206 - ( vy) - vy*this.scaleHeight;
+                this.sh2 = 1206 / this.scaH;
+                this.sy2 = 1206 - this.sh2 - (1206 - this.sh2) * this.scaleTop  ;
+            }
+
+
+
+            // console.log('w: '+this.sw);
+            // console.log('h: '+this.sh);
+            // console.log('x: '+this.sx);
+            // console.log('y: '+this.sy);
+
+            // console.log('w2: '+this.sw2);
+            // console.log('h2: '+this.sh2);
+            // console.log('x2: '+this.sx2);
+            // console.log('y2: '+this.sy2);
+
+
+            this.draw();
+
+        }
+
+        var index = 0;
+        // 算法需要的几个变量
+        var start = 0;
+        // during根据设置的总时间计算
+        var during = 220;  //17ms每帧，100帧等于1700ms 
+        // 动画请求帧
+        var req = null;
+        var time = 0;
+
+        var render = function (obj) {
+            // console.log(obj);
+            
+            var vx = easeIn(start,0,511,during);
+            var vy = easeIn(start,0,638,during);
+            start++;
+            // console.log(start,vx,vy);
+            if (start <= during+1){
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                draw.call(obj,vx,vy);
+
+                req = requestAnimationFrame(function(){
+                    render(obj)
+                });
+            }
+            else{
+                console.log(new Date().getTime() - time);
+                cancelAnimationFrame(req);
+            }
+
+            
+            // if (obj.sx == 0 || obj.sy == 0){
+            //     index++
+            //     console.log(index);
+            //     if (index >= arr.length){
+            //         return
+            //     }
+            //     render(arr[index]);
+            //     // console.log(1);
+                
+            // }else{
+            //     req = requestAnimationFrame(function(){
+            //         render(obj)
+            //     });
+            // }
+                
+
+        };
+
+
+        var imgInfo1 = {
+            imgUrl1:'1.jpg',
+            imgUrl2:'2.jpg',
+
+            // 大图片老奶奶的位置和宽高属性（小奶奶）
+            sx : 511,
+            sy : 638,
+            sw : 62,
+            sh : 100,
+
+            // 首页老奶奶的位置和宽高属性（大奶奶）
+            sx2 : 0,
+            sy2 : 0,
+            sw2 : 750,
+            sh2 : 1206,
+        }
+
+        var imgInfo2 = {
+            imgUrl1:'2.jpg',
+            imgUrl2:'3.jpg',
+
+            // 大图片老奶奶的位置和宽高属性（小奶奶）
+            sx : 511,
+            sy : 638,
+            sw : 62,
+            sh : 100,
+
+            // 首页老奶奶的位置和宽高属性（大奶奶）
+            sx2 : 0,
+            sy2 : 0,
+            sw2 : 750,
+            sh2 : 1206,
+        }
+
+        var drawImg1 = new drawScale(imgInfo1);
+        var drawImg2 = new drawScale(imgInfo2);
+
+        var arr = [drawImg1,drawImg2]
+        // setInterval(function(){
+        //     if (drawImg.sx == 0 || drawImg.sy == 0)
+        //         return
+        //     render()
+        // },200)
+        
+       // render(drawImg1)
+
+        $('.btn').on('touchstart',function(e){
+            render(arr[index]);
+            e.preventDefault();
+            time = new Date().getTime();
+        });
+
+
+        $('.btn').on('touchend',function(){
+            cancelAnimationFrame(req)
+        });
+        
+    </script>
+</body>
+</html>

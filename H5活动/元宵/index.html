@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>&nbsp;</title>
+    <script>(function(doc,win){var docEl=doc.documentElement,resizeEvt='orientationchange'in window?'orientationchange':'resize',recalc=function(){var clientWidth=docEl.clientWidth;if(!clientWidth)return;docEl.style.fontSize=20*(clientWidth/320)+'px';if(window.innerHeight/window.innerWidth>1.8){document.body.className='isIphone'}else{document.body.className=''}};if(!doc.addEventListener)return;win.addEventListener(resizeEvt,recalc,false);doc.addEventListener('DOMContentLoaded',recalc,false)})(document,window);</script>
+    <link rel="stylesheet" href="css/css.css">
+    <script src="js/easeljs.js"></script>
+    <script src="js/preloadjs.min.js"></script>
+    <script src="js/tweenjs.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 主页 -->
+        <div class="page-index" style="display: block">
+            <img src="images/logo.png" class="logo" alt="">
+            <img src="images/btn-rule.png" class="btn-rule" alt="">
+            <img src="images/title.png" class="title" alt="">
+            <div class="count-bar">剩余游戏次数：<span class="count">10</span></div>
+            <img src="images/btn-start.png" class="btn-start" alt="">
+        </div>
+        <!-- 游戏页 -->
+        <div class="page-game" style="display:none;">
+            <div class="game-info">
+                <div class="avatar-wrap">
+                    <img src="images/avatar.png" class="avatar" alt="">
+                </div>
+                <div class="score-wrap"><span id="score">0</span>分</div>
+                <div class="time-wrap">
+                    <img src="images/clock.png" class="clock" alt="">
+                    <div class="downTime-wrap">
+                        <span id="second">01</span>:<span id="millisecond">27</span>
+                    </div>
+                </div>
+                <img src="images/logo.png" class="logo" alt="">
+            </div>
+            <canvas id="game-view" width="750" height="1206"></canvas>
+            <!-- 提示图片 -->
+            <img src="images/tips-mask.png" class="tips-mask" alt="">
+
+            <!-- 结果 -->
+            <div class="result-mask mask" style="display: none">
+                <div class="result-cont bounceIn">
+                    <div class="avatar-wrap">
+                        <img src="images/avatar.png" class="avatar" alt="">
+                    </div>
+                    <div class="result-item">你的成绩为：<span id="result-score">30</span> 分</div>
+                    <div class="result-item">最佳成绩为：<span id="best-score">50</span> 分</div>
+                    <div class="result-item">剩余游戏机会：<span class="count">300</span> 次</div>
+                    <!-- 底部小字提示 -->
+                    <div class="static-tips">
+                        把好运汤圆分享给家人和朋友<br>
+                        可以再增加 <span>10</span> 次游戏机会哦！
+                    </div>
+                    <div class="result-btn">
+                        <img src="images/btn-restart.png" id="btn-restart" alt="">
+                        <img src="images/btn-share.png" class="btn-share" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 活动说明 -->
+        <div class="mask rule-mask">
+            <div class="rule-cont bounceIn">
+                <img src="images/ok_close.png" class="ok_close" alt="">
+            </div>
+        </div>
+
+        <!-- 我也要 -->
+        <div class="page_affirm" style="display: none;">
+            <img class="qr_code"  src="images/qr_code.png"/>
+        </div>
+    </div>
+    <script src="js/game1.js"></script>
+</body>
+</html>

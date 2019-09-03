@@ -1,0 +1,1287 @@
+@r:46.875rem;
+@R:46.875rem;
+
+*{
+  padding:0;
+  margin:0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+  padding:0;
+  margin:0;
+  width:100vw;
+  height:100vh;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+img{
+  display: block;
+  max-width: 100%;
+}
+
+/* 封面 */
+.index-cover{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url("http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/index_cover.png?v9")no-repeat left top/100% 100%;
+  z-index: 2;
+}
+.logo{
+  position: absolute;
+  top: 5%;
+  left: 274/@r;
+  width: 202/@r;
+  //-webkit-animation: fadeIn 1s ease backwards;
+  //-o-animation: fadeIn 1s ease backwards;
+  //animation: fadeIn 1s ease backwards;
+}
+.logo1{
+  position: absolute;
+  width: 165/@R;
+  right: 56/@r;
+  top: 56/@r;
+}
+.btn-back{
+  position: absolute;
+  width: 148/@r;
+  left: 56/@r;
+  top: 1.3rem;
+}
+.subTitle{
+  position: absolute;
+  width: 542/@r;
+  left: 119/@r;
+  top: 14%;
+  -webkit-animation: down1 1s backwards ease;
+  -o-animation: down1 1s backwards ease;
+  animation: down1 1s backwards ease;
+}
+.center_pig{
+  position: absolute;
+  width: 424/@r;
+  left: 3.5rem;
+  top: 34%;
+  -webkit-animation: bounceIn 1.2s ease backwards;
+  -o-animation: bounceIn 1.2s ease backwards;
+  animation: bounceIn 1.2s ease backwards;
+}
+.text1{
+  position: absolute;
+  width: 67/@r;
+  left: 570/@r;
+  top: 45%;
+  opacity: 0;
+  -webkit-animation: slide1 1.2s 1s forwards;
+  -o-animation: slide1 1.2s 1s forwards;
+  animation: slide1 2.2s 1s forwards;
+}
+.text2{
+  position: absolute;
+  width: 80/@r;
+  left: 94/@r;
+  top: 32%;
+  opacity: 0;
+  -webkit-animation: slide2 2.2s 1s forwards;
+  -o-animation: slide2 2.2s 1s forwards;
+  animation: slide2 2.2s 1s forwards;
+}
+
+.fu-btn-wrap{
+  position: absolute;
+  width: 148/@r;
+  height: 148/@r;
+  left: 302/@r;
+  bottom: 16%;
+  -webkit-animation: fadeIn 1s 2.5s ease backwards;
+  -o-animation: fadeIn 1s 2.5s ease backwards;
+  animation: fadeIn 1s 2.5s ease backwards;
+  img{
+    position: absolute;
+  }
+  .circle{
+    width: 148/@r;
+    -webkit-animation: flsh 1s linear infinite;
+    animation: flsh 1s linear infinite;
+  }
+  .fu{
+    width: 89/@r;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .click_tips{
+    position: absolute;
+    width: 118/@r;
+    left: 4rem;
+    bottom: 70%;
+    pointer-events: none;
+    -webkit-animation: aniTips 1s linear alternate infinite;
+    animation: aniTips 1s linear alternate infinite;
+  }
+}
+.btn-rule{
+  position: absolute;
+  width: 1.6rem;
+  top: 4%;
+  right: 1rem;
+}
+.btn-close{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2rem;
+}
+.rule-box{
+  width: 90%;
+  margin: 2rem auto;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 0.6rem;
+  text-align: center;
+  -webkit-animation: bounceIn 0.8s ease backwards;
+  -o-animation: bounceIn 0.8s ease backwards;
+  animation: bounceIn 0.8s ease backwards;
+  h3{
+    font-size: .85rem;
+    line-height: 1.8;
+  }
+  ol{
+    list-style: none;
+    padding: 0 0.5rem;
+    max-height: 17rem;
+    overflow-y: scroll;
+    text-align: left;
+    font-size: 0.575rem;
+    line-height: 1.5;
+  }
+  .close-rule{
+    height: 1.2rem;
+    width: 4rem;
+    margin: 0.8rem auto;
+    border-radius: 0.6rem;
+    background: #ba1c2d;
+    font-size: 0.675rem;
+    line-height: 1.2rem;
+  }
+}
+
+.rule-box.zoomOut{
+  -webkit-animation: zoomOut .6s backwards ease;
+  -o-animation: zoomOut .6s backwards ease;
+  animation: zoomOut .6s backwards ease;
+}
+
+
+/* 封面结束 */
+
+
+/* 跑马灯 */
+.go-game{
+  display: none;
+  position: absolute;
+  bottom: 11%;
+  left: (750-347)/2/@r;
+  width: 347/@r;
+  z-index: 2;
+  -webkit-animation: tada 1s infinite linear;
+  -o-animation: tada 1s infinite linear;
+  animation: tada 1s infinite linear;
+}
+
+.rotate-wrap{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.btn-more{
+  position: absolute;
+  width: 5.568rem;
+  top: 45%;
+  left: 5.324rem;
+}
+.hand{
+  position: absolute;
+  width: 1.94133333rem;
+  left: 9.624rem;
+  top: 47%;
+  -webkit-animation: ani-finger 1s infinite both;
+}
+.mask{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.7);
+  z-index: 99;
+}
+.introMask{
+    .intor{
+      display: none;
+      position: absolute;
+      width: 558/@r;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 94;
+      margin: auto;
+  }
+  .btn-know{
+    display: none;
+    position: absolute;
+    top: 65%;
+    left: (750-237)/2/@r;
+    width: 237/@r;
+    z-index: 94;
+  }
+}
+
+#space{
+  -webkit-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+  -webkit-perspective: 300vw;    /*边框视角放大*/
+  perspective: 75vw;
+  width:100vw;
+  height:100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.img_cover{
+  position:absolute;
+  left:0;
+  right:0;
+  width:100vw;
+  height:100vh;
+  transform-origin:right;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+.rot_img{
+  pointer-events: none;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.last{
+  pointer-events: auto;
+}
+.frame_01{
+  background:url('http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/kuang1.png?v9') no-repeat 0 0 e('/')100% 100%;
+}
+.frame_02{
+  background:url('http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/kuang2.png?v9') no-repeat 0 0 e('/')100% 100%;
+}
+.frame_03{
+  background:url('http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/kuang3.png?v9') no-repeat 0 0 e('/')100% 100%;
+}
+.frame_04{
+  background:url('http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/kuang4.png?v9') no-repeat 0 0 e('/')100% 100%;
+}
+.frame_05{
+  background:url('http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/kuang5.png?v9') no-repeat 0 0 e('/')100% 100%;
+}
+
+.rot_img_0{
+  background:url('http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/1.png?v9') no-repeat 0 0 e('/')100% 100%;
+}
+
+/* 跑马灯结束 */
+
+/* 游戏 */
+.game-wrap{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url("http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/game_bg.jpg?v9")no-repeat left top/100% 100%;
+}
+
+.select-wrap{
+  color: #a57e5e;
+  font-size: 26/@r;
+  text-align: center;
+  .swiper-slide-active{
+    color: #fff;
+  }
+}
+.swiper1,.swiper2{
+  position: absolute !important;
+  top: 50%;
+  width: 172/@r;
+  height: 13.5%;
+}
+.swiper1{
+  left: 4.2rem;
+}
+.swiper2{
+  left: 8.05rem;
+}
+
+.game-title{
+  position: absolute;
+  width: 683/@r;
+  top: 140/@r;
+  left: (750-683)/2/@r;
+  -webkit-animation: bounceInDown 1.2s ease backwards;
+  -o-animation: bounceInDown 1.2s ease backwards;
+  animation: bounceInDown 1.2s ease backwards;
+}
+.game-el1{
+  position: absolute;
+  width: 62/@r;
+  left: 27/@R;
+  top: 349/@R;
+  -webkit-animation: bounceIn 1s 1.2s ease backwards,rotateFu infinite 1s linear alternate;
+  -o-animation: bounceIn 1s 1.2s ease backwards,rotateFu infinite 1s linear alternate;
+  animation: bounceIn 1s 1.2s ease backwards,rotateFu infinite 1s linear alternate;
+}
+.game-el2{
+  position: absolute;
+  width: 60/@r;
+  left: 647/@r;
+  top: 348/@r;
+  -webkit-animation: bounceIn 1s 1.2s ease backwards,rotateFu infinite 1s linear alternate;
+  -o-animation: bounceIn 1s 1.2s ease backwards,rotateFu infinite 1s linear alternate;
+  animation: bounceIn 1s 1.2s ease backwards,rotateFu infinite 1s linear alternate;
+}
+.game-pig{
+  position: absolute;
+  width: 152/@r;
+  left: 569/@r;
+  bottom: 22%;
+  z-index: 2;
+  -webkit-animation: fadeInRight 1s 1s ease backwards;
+  -o-animation: fadeInRight 1s 1s ease backwards;
+  animation: fadeInRight 1s 1s ease backwards;
+}
+.btn-open{
+  position: absolute;
+  width: 396/@r;
+  left: (750-396)/2/@R;
+  bottom: 16%;
+  -webkit-animation: ripple 1s 1.3s linear infinite alternate;
+  -o-animation: ripple 1s 1.3s linear infinite alternate;
+  animation: ripple 1s 1.3s linear infinite alternate;
+}
+.more-gift{
+  display: none;
+  position: absolute;
+  width: 396/@r;
+  left: (750-396)/2/@R;
+  bottom: 10%;
+  -webkit-animation: ripple 1s  linear infinite alternate;
+  -o-animation: ripple 1s  linear infinite alternate;
+  animation: ripple 1s  linear infinite alternate;
+}
+
+.immediately{
+  display: none;
+  width: 396/@r;
+  margin: 0 auto;
+  -webkit-animation: ripple 1s 1.3s linear infinite alternate;
+  -o-animation: ripple 1s 1.3s linear infinite alternate;
+  animation: ripple 1s 1.3s linear infinite alternate;
+}
+.chou-tips{
+  position: absolute;
+  width: 346/@r;
+  left: (750-346)/2/@r;
+  bottom: 15%;
+}
+.lock-wrap{
+  position: absolute;
+  top: 346/@r;
+  width: 615/@r;
+  height: 593/@r;
+  left: (750-615)/2/@r;
+  background: url("http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/lock.png?v9")no-repeat left top /100% 100%;
+}
+.poster-wrap{
+  position: absolute;
+  top: 5%;
+  width: 68%;
+  left: 16%;
+  text-align: center;
+  .btn-reset{
+    width: 129/@r;
+    margin: 0 auto .8rem;
+  }
+  .circle-chou{
+    position: absolute;
+    width: 101/@r;
+
+    left: -1.1rem;
+    top: 20.5rem;
+    -webkit-animation: ripple .8s  linear infinite alternate;
+    -o-animation: ripple .8s  linear infinite alternate;
+    animation: ripple .8s  linear infinite alternate;
+  }
+  .save-tips{
+    display: none;
+    position: absolute;
+    width: 176/@r;
+    top: 18.7rem;
+    left: -1rem;
+  }
+}
+.close-downMask{
+  position: absolute;
+  width: 1.2rem;
+  right: -1rem;
+  top: -1.3rem;
+}
+#poster{
+  padding-bottom: .5rem;
+}
+.introMask{
+  .btn{
+    position: absolute;
+    top: 65%;
+    width: 257/@r;
+    z-index: 99;
+  }
+  .introBtnContinue{
+    left: 8rem;
+  }
+  .introBtnGame{
+    left: 2.5rem;
+  }
+}
+
+
+
+
+/* 游戏结束 */
+
+
+
+/*音乐*/
+.m_ele{
+  display: none;
+}
+.music{
+  position: fixed;
+  top: 3%;
+  right: 5%;
+  width: 10vw;
+  height: 10vw;
+  z-index: 95;
+}
+.music_bg{
+  position: fixed;
+  top: 1%;
+  right: 0;
+  width: 16%;
+  z-index: 95;
+}
+.music_bg img{
+  width: 100%
+}
+.m_active{
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin{
+  to{
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+@keyframes spin{
+  to{
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+.guidance{
+  width: 26vw;
+  height: 11vw;
+  background: url(http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/guidance.png?v9)no-repeat center/cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 2;
+  opacity: 0;
+  -webkit-animation: guidance 3s ease-in-out 0.5s infinite;
+  -moz-animation: guidance 3s ease-in-out 0.5s infinite;
+  animation: guidance 3s ease-in-out 0.5s infinite;
+  pointer-events: none;
+}
+
+@-webkit-keyframes guidance {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes guidance {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn{
+  -webkit-animation: bounceIn .8s ease backwards;
+  -o-animation: bounceIn .8s ease backwards;
+  animation: bounceIn .8s ease backwards;
+}
+.bounceOutDown{
+  -webkit-animation: bounceOutDown .8s ease forwards;
+  -o-animation: bounceOutDown .8s ease forwards;
+  animation: bounceOutDown .8s ease forwards;
+}
+
+@-webkit-keyframes bounceOutDown {
+  20% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  40%,
+  45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+
+@keyframes bounceOutDown {
+  20% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  40%,
+  45% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes flsh {
+  0% {
+    -webkit-transform: rotateY(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+@keyframes flsh {
+  0% {
+    -webkit-transform: rotateY(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes rotateFu {
+  0% {
+    -webkit-transform: rotate(-15deg);
+  }
+  100% {
+    -webkit-transform: rotate(5deg);
+  }
+}
+
+@keyframes rotateFu {
+  0% {
+    -webkit-transform: rotate(-15deg);
+  }
+  100% {
+    -webkit-transform: rotate(5deg);
+  }
+}
+
+.rotateFu{
+  -webkit-animation: rotateFu 2s linear infinite alternate;
+  animation: rotateFu 2s linear infinite alternate;
+}
+
+
+
+@-webkit-keyframes rotateFu2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+  }
+}
+
+@keyframes rotateFu2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+  }
+}
+
+.rotateFu2{
+  -webkit-animation: rotateFu2 .5s linear forwards ;
+  animation: rotateFu2 .5s linear forwards;
+}
+
+@-webkit-keyframes aniTips {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-20px,10px);
+  }
+}
+
+
+
+
+@keyframes aniTips {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-20px,10px);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes down1 {
+  0% {
+    -webkit-transform: translate(0px,-600px);
+  }
+
+  100% {
+    -webkit-transform: translate(0px,0px);
+  }
+}
+@keyframes down1 {
+  0% {
+    -webkit-transform: translate(0px,-600px);
+  }
+
+  100% {
+    -webkit-transform: translate(0px,0px);
+  }
+}
+
+@-webkit-keyframes slide1 {
+  0%{
+    opacity: 1;
+    -webkit-transform: translateX(-14rem);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes slide1 {
+  0%{
+    opacity: 1;
+    -webkit-transform: translateX(-14rem);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slide2 {
+  0%{
+    opacity: 1;
+    -webkit-transform: translateX(14rem);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes slide2 {
+  0%{
+    opacity: 1;
+    -webkit-transform: translateX(14rem);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes ani-finger{
+  0% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+  30%, 40% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0.92);
+    opacity: 1;
+  }
+  60%, 70% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  90%, 100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes ripple{
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1,1);;
+    -moz-transform: scale(1,1);;
+    -ms-transform: scale(1,1);;
+    -o-transform: scale(1,1);;
+    transform: scale(1,1);;
+  }
+  100% {
+
+    opacity: 0.9;
+    -webkit-transform: scale(0.9,0.9);
+    -moz-transform: scale(0.9,0.9);
+    -ms-transform: scale(0.9,0.9);
+    -o-transform: scale(0.9,0.9);
+    transform: scale(0.9,0.9);
+  }
+}
+
+@keyframes ripple{
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1,1);;
+    -moz-transform: scale(1,1);;
+    -ms-transform: scale(1,1);;
+    -o-transform: scale(1,1);;
+    transform: scale(1,1);;
+  }
+  100% {
+
+    opacity: 0.9;
+    -webkit-transform: scale(0.9,0.9);
+    -moz-transform: scale(0.9,0.9);
+    -ms-transform: scale(0.9,0.9);
+    -o-transform: scale(0.9,0.9);
+    transform: scale(0.9,0.9);
+  }
+}
+
+
+
+.page_affirm .qr_code{
+  width:12.2rem ;
+  -webkit-animation: dialogTop 0.6s ease both 1;
+  animation: dialogTop 0.6s ease both 1;
+  margin: 4rem auto 0;
+}
+.qr_code.dOut{
+  -webkit-animation: dialogOut 0.6s ease both 1;
+  animation: dialogOut 0.6s ease both 1;
+}
+.page_affirm{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background: rgba(0,0,0,.8);
+  z-index: 66;
+}
+
+@-webkit-keyframes dialogTop {
+  from { -webkit-transform:translate(0,4rem) scale(0.5); opacity:0}
+  to{opacity: 1;}
+}
+@keyframes dialogTop {
+  from { transform:translate(0,4rem) scale(0.5); opacity:0}
+  to{opacity: 1;}
+}
+@-webkit-keyframes dialogOut {
+  from {}
+  to{ -webkit-transform:translate(0,4rem) scale(0.5); opacity:0}
+}
+@keyframes dialogOut {
+  from {opacity: 1;}
+  to{ transform:translate(0,4rem) scale(0.5); opacity:0}
+}
+
+.downApp-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 510/@r;
+  height: 591/@r;
+  margin: auto;
+  //background: url("http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/downApp.png?v9")no-repeat center/cover;
+  //text-align: center;
+  //padding-top: 450/@r;
+  -webkit-animation: zoomIn .6s ease backwards;
+  -o-animation: zoomIn .6s ease backwards;
+  animation: zoomIn .6s ease backwards;
+  .btn{
+    display: inline-block;
+    width: 129/@r;
+    margin: 0 .18rem;
+  }
+}
+
+.zoomIn{
+  -webkit-animation: zoomIn .6s ease backwards;
+  -o-animation: zoomIn .6s ease backwards;
+  animation: zoomIn .6s ease backwards;
+}
+
+.downApp-wrap.zoomOut{
+  -webkit-animation: zoomOut .6s backwards ease;
+  -o-animation: zoomOut .6s backwards ease;
+  animation: zoomOut .6s backwards ease;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+

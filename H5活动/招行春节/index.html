@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                    if (window.innerHeight / window.innerWidth > 1.8) {
+                        document.body.className = 'isIphone';
+                    } else {
+                        document.body.className = '';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script src="https://cdn.bootcss.com/Swiper/4.4.6/js/swiper.min.js"></script>-->
+    <!--<link href="https://cdn.bootcss.com/Swiper/4.4.6/css/swiper.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/css.css">
+
+</head>
+<body>
+
+<script src="https://cdn.bootcss.com/Swiper/4.4.6/js/swiper.min.js"></script>
+<link href="https://cdn.bootcss.com/Swiper/4.4.6/css/swiper.min.css" rel="stylesheet">
+<div class="guide-wrap" style="display: block">
+    <!-- 首页封面 -->
+    <div class="index-cover">
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/logo.png?v9" class="logo" alt="">
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/subTitle.png?v9" class="subTitle" alt="">
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/center_pig.png?v9" class="center_pig" alt="">
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/text1.png?v9" class="text1" alt="">
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/text2.png?v9" class="text2" alt="">
+        <div class="fu-btn-wrap" data-track="点击福字">
+            <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/circle.png?v9" class="circle" alt="">
+            <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/fu.png?v9" class="fu rotateFu" alt="">
+            <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/click_tips.png?v9" class="click_tips" alt="">
+        </div>
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/btn-rule.png?v9" class="btn-rule" alt="">
+    </div>
+    <div class="mask rule-mask">
+        <div class="rule-box">
+            <h3>活动说明</h3>
+            <div class="content">
+                <ol class=" list-paddingleft-2">
+                    <li>
+                        1 活动主题：“小招邀您赏民俗”系列活动
+                    </li>
+                    <li>
+                        2 活动时间：2019年1月9日起
+                    </li>
+                    <li>
+                        3 参与方式：登陆招商银行APP进入“小招邀您赏民俗”活动，赏民俗之余还可生成“我的2019关键词”海报，朋友圈分享之后即可参与抽奖。
+                    </li>
+                    <li>
+                        4 抽奖说明：本活动共设置两类抽奖：（1）赏民俗抽奖：每人有且只有1次抽奖机会，礼品数量有限，先到先得，领完即止。（2）做任务赢好礼抽奖：根据指引，每完成一项任务可获得一次抽奖资格。
+                    </li>
+                    <li>
+                        5 使用范围：需前往招行广州分行、清远分行、湛江分行网点领取；
+                    </li>
+                    <li>
+                        6 使用规则：中奖客户可至招行广州分行、清远分行、湛江分行任意网点领取1份新春大礼包，到网点领取时，需用招行App扫码确认，请提前下载App；
+                        *如遇网点礼包发放完毕导致无法领取，请就近前往其他网点领取或等待调货，给您造成不便敬请谅解；
+                    </li>
+                    <li>
+                        7 有效期限：兑换截止时间为2019年1月31日。逾期未领取视作自动放弃兑换，敬请谅解。
+                    </li>
+                    <li>
+                        8 本次活动最终解释归招商银行所有。
+                    </li>
+                </ol>
+                <div class="close-rule">我知道了</div>
+            </div>
+        </div>
+    </div>
+    <!-- 背景音乐 -->
+    <div class="m_ele">
+        <div class="music_bg" style="display: none;">
+            <img src="http://img.wx.xiao-bo.com/z/act/2016-101112/gzgd/h5/music_bg.gif">
+        </div>
+        <div class="music">
+            <img width="100%" src="http://img.wx.xiao-bo.com/z/act/2016-101112/gzgd/h5/music_rotate.png?v9">
+        </div>
+        <audio id="audio" src="http://img.wx.xiao-bo.com/z/act/2018-101112/gzl-pmd/bgm.mp3?v28" loop="loop"
+               preload="auto"></audio>
+    </div>
+    <!-- 旋转 -->
+    <div class="rotate-wrap">
+        <div class="guidance" id="guidance"></div>
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/go_game.png?v9" data-track="点击了开启好运2019"
+             class="go-game" alt="">
+        <div id="space">
+            <div class="img_cover rot_img_0"></div>
+            <div class="img_cover frame_01"></div>
+            <div class="img_cover frame_02"></div>
+            <div class="img_cover frame_05"></div>
+        </div>
+
+    </div>
+    <!-- 民俗弹窗 -->
+    <div class="mask introMask">
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/mask1.png?v9" alt="" class="intor">
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/mask2.png?v9" alt="" class="intor">
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/mask3.png?v9" alt="" class="intor">
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/mask4.png?v9" alt="" class="intor">
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/mask5.png?v9" alt="" class="intor">
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/introBtnContinue.png" class="introBtnContinue btn" alt="">
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/introBtnGame.png" class="introBtnGame btn" alt="">
+
+        <!--<img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/btn-know.png?v9" class="btn-know" alt="">-->
+    </div>
+</div>
+
+<!-- 游戏 -->
+<div class="game-wrap" style="display: none">
+    <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/game_bg.jpg?v9" style="width: 100%;height: 100%;" alt="">
+    <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/logo.png?v9" class="logo1" alt="">
+    <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/btn-back.png" class="btn-back" alt="">
+    <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/game_title.png?v9" class="game-title" alt="">
+    <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/game_el1.png?v9" class="game-el1" alt="">
+    <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/game_el2.png?v9" class="game-el2" alt="">
+    <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/game_pig.png?v9" class="game-pig" alt="">
+    <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/btn_chou.png?v9" class="btn-open" data-track="点击了生成海报"
+         alt="">
+    <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/more-gift.png" class="more-gift" alt="">
+    <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/chou_tips.png?v9" class="chou-tips" alt="">
+    <div class="select-wrap">
+        <div class="swiper-container swiper1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">中国结</div>
+                <div class="swiper-slide">花鸟字</div>
+                <div class="swiper-slide">挥春</div>
+                <div class="swiper-slide">剪纸</div>
+                <div class="swiper-slide">糖画</div>
+            </div>
+        </div>
+        <div class="swiper-container swiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">鼠</div>
+                <div class="swiper-slide">牛</div>
+                <div class="swiper-slide">虎</div>
+                <div class="swiper-slide">兔</div>
+                <div class="swiper-slide">龙</div>
+                <div class="swiper-slide">蛇</div>
+                <div class="swiper-slide">马</div>
+                <div class="swiper-slide">羊</div>
+                <div class="swiper-slide">猴</div>
+                <div class="swiper-slide">鸡</div>
+                <div class="swiper-slide">狗</div>
+                <div class="swiper-slide">猪</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 海报 -->
+    <div class="posterMask mask" style="display: none">
+        <div class="poster-wrap">
+            <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/btn-close.png?v9" class="btn-close" alt="">
+            <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/btn-reset.png?v9" data-track="点击了重新测试"
+                 class="btn-reset btn" alt="">
+            <img src="" id="poster" alt="">
+            <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/save-tips.png?v9" class="save-tips" alt="">
+            <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/circle-chou1.png?v9" class="circle-chou" alt="">
+            <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/immediately.png?v9" class="immediately" alt="">
+            <!--<img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/btn-share.png?v9" data-track="点击了分享抽奖"-->
+            <!--class="btn-share btn" alt="">-->
+
+        </div>
+    </div>
+
+    <!-- 没有关注 -->
+    <div class="page_affirm subMask" style="display: none;">
+        <img class="qr_code" src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/qr_code.png?v9"/>
+    </div>
+
+    <!-- 下载app -->
+    <!-- <div class="mask downMask" style="display: none">
+        <div class="downApp-wrap">
+            <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/downApp.png?v9" alt="">
+            <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/btn_close.png?v9" class="close-downMask" alt="">
+        </div>
+        <img src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/immediately.png?v9" class="immediately" alt="">
+        <img class="qr_code"  src="http://img.wx.xiao-bo.com/z/act/2018-101112/zh-cj/downApp.png?v9"/>
+    </div> -->
+</div>
+
+
+<script src="js/js.js"></script>
+</body>
+</html>
