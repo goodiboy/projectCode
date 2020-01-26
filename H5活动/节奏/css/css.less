@@ -1,0 +1,249 @@
+@charset "utf-8";
+@r: 40rem;
+@R: 40rem;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  font-family: -apple-system, "PingFang SC", "Helvetica Neue", Helvetica, STHeiTi, microsoft yahei, arial, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  min-height: 100vh;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none
+}
+
+ul, ol {
+  list-style: none
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+.btn_begin{
+  width: 370/@r;
+  margin: 0 auto;
+}
+
+.page{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.page_index{
+  background: rgba(0,0,0,.8);
+}
+
+.page_game{
+  background: url("../assets/index1.jpg")no-repeat left top /100% 100%;
+}
+#game{
+  position: absolute;
+  left: 0;
+  bottom: 4vh;
+  height: 65vh;
+  width: 100%;
+  background: url("../assets/game_bg.png")no-repeat left top /100% 100%;
+  //height: 100vh;
+}
+/*用户得分信息*/
+.user_info_bg{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: (750-708)/2/@r;
+  top: 0;
+  width: 708/@r;
+  height: 158/@r;
+  background: url("../assets/userInfo_bg.png")no-repeat center/cover;
+  .info_wrap{
+    display: flex;
+    align-items: center;
+    width: 210/@r;
+    height: 50/@r;
+    border-radius: 50/@r;
+    border: 1px solid #fd5ae7;
+    //line-height: 50/@r;
+    color: #fff;
+    font-size: 26/@r;
+    box-sizing: border-box;
+    padding-left: 15/@r;
+    margin-right: 47/@r;
+    img{
+      margin-right: 8/@r;
+    }
+  }
+  .clock{
+    width: 31/@r;
+    height: 35/@r;
+  }
+  .star{
+    width: 37/@r;
+    height: 37/@r;
+  }
+}
+.avatar_wrap{
+  width: 92/@r;
+  height: 92/@r;
+  border-radius: 92/@r;
+  border: 1px solid #fd5ae7;
+  overflow: hidden;
+  margin-left: 52/@r;
+  margin-right: 24/@r;
+}
+/*选择音乐开始*/
+.select_music_mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.7);
+  z-index: 10;
+  .main_box{
+    position: absolute;
+    top: 28vh;
+    left: 0;
+    right: 0;
+    width: 731/@r;
+    height: 408/@r;
+    margin: auto;
+    background: url("../assets/select_music_box.png")no-repeat center/cover;
+  }
+}
+.btn_selected{
+  position: absolute;
+  width: 239/@r;
+  left: 247/@r;
+  top: 312/@r;
+  z-index: 2;
+}
+.swiper-container{
+  position: absolute;
+  width: 616/@r;
+  height: 268/@r;
+  left: 56/@r;
+  top: 82/@r;
+  //background: red;
+  font-size: 34/@r;
+  color: #fff;
+  .music_img{
+    position: absolute;
+    width: 168/@r;
+    top: 54/@r;
+    left: 77/@r;
+
+  }
+  .music_name{
+    position: absolute;
+    top: 66/@r;
+    left: 264/@r;
+    span{
+      color: #fc55e3;
+    }
+  }
+  .difficulty_wrap{
+    position: absolute;
+    left: 264/@r;
+    top: 157/@r;
+    .difficulty_star{
+      width: 60/@r;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+.swiper-button-prev{
+  background-image:url("../assets/swiper_prev.png");
+}
+.swiper-button-next{
+  background-image:url("../assets/swiper_next.png");
+}
+.btn_style {
+  position: absolute;
+  width: 5.975rem;
+
+  top: 7.8rem;
+  z-index: 2;
+}
+
+.btn_selected{
+  left: 9.5rem;
+}
+.btn_try{
+  left: 3.175rem;
+}
+
+/*选择音乐结束*/
+
+
+/* 倒计时 */
+.timeDown_wrap_mask{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+.b_down{
+  display: none;
+  position: absolute;
+  top: 28vh;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 6.975rem;
+  animation: 1s zoomInBig ease forwards;
+}
+
+
+@-webkit-keyframes zoomInBig{
+  0%{
+    transform: scale(1.5);
+  }
+  100%{
+    transform: scale(0.6);
+  }
+}
+
+@keyframes zoomInBig{
+  0%{
+    transform: scale(1.5);
+  }
+  100%{
+    transform: scale(0.6);
+  }
+}
+/* 倒计时结束 */
+/*预加载开始*/
+#preload{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1d191d;
+  z-index: 99999;
+  color: #fff;
+  font-size:.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*预加载结束*/

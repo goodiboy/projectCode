@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>&nbsp;</title>
+    <script>(function(doc,win){var docEl=doc.documentElement,resizeEvt='orientationchange'in window?'orientationchange':'resize',recalc=function(){var clientWidth=docEl.clientWidth;if(!clientWidth)return;docEl.style.fontSize=20*(clientWidth/375)+'px';if(window.innerHeight/window.innerWidth>1.8){document.body.className='isIphone'}else{document.body.className=''}};if(!doc.addEventListener)return;win.addEventListener(resizeEvt,recalc,false);doc.addEventListener('DOMContentLoaded',recalc,false)})(document,window);</script>
+    <link rel="stylesheet" href="css/css.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='./js/alloy_finger.js'></script>
+    <script src='./js/alloy_paper.js'></script>
+</head>
+<body>
+<div class="page_act_loading flex">
+    <div>
+        <p>loading...</p>
+        <p class="progress"></p>
+    </div>
+</div>
+<audio style="display: none;" id="bg_music" src="./images/gq.mp3" loop="loop"></audio>
+<div class="page_start" style="display: none;">
+    <img class="banner fadeInDown" src="./images/banner.png" />
+    <img class="rule" src="./images/rule.png" />
+    <img class="people" src="./images/people.png" />
+    <img class="tree" src="./images/tree.png" />
+    <img class="btn_start tada" src="./images/btn_start.png" />
+</div>
+
+<div class="page_tip flex" style="display: none;">
+    <img class="modal" src="./images/modal.png?v=1" />
+</div>
+
+<div class="page_draw">
+    <canvas id="canvas" width="750" height="1206"></canvas>
+    <img class="poster_bg" src="./images/poster_bg_3.png" />
+    <div class="tools_box" style="display: none;">
+        <span class="tools_item_toggle"></span>
+        <!--<img class=""  src="./images/icon_l.png" />-->
+        <!--背景-->
+        <div class="tools_item_box tools_item_box_1">
+            <img class="tools_item_box_1_l" src="./images/icon_l.png" />
+            <img class="tools_item_box_1_r" src="./images/icon_r.png" />
+            <div class="tools_item_box_cont">
+                <img class="thumb_bg" data-index="3" src="./images/thumb_bg_3.png" />
+                <img class="thumb_bg" data-index="1" src="./images/thumb_bg_1.png" />
+                <img class="thumb_bg" data-index="7" src="./images/thumb_bg_7.png" />
+                <img class="thumb_bg" data-index="2" src="./images/thumb_bg_2.png" />
+                <img class="thumb_bg" data-index="6" src="./images/thumb_bg_6.png" />
+                <img class="thumb_bg" data-index="8" src="./images/thumb_bg_8.png" />
+                <img class="thumb_bg" data-index="4" src="./images/thumb_bg_4.png?v=1" />
+                <img class="thumb_bg" data-index="5" src="./images/thumb_bg_5.png" />
+            </div>
+        </div>
+        <!--人物-->
+        <div class="tools_item_box tools_item_box_2 flex" style="display: none">
+            <img class="boy thumb_people" data-type="boy" src="./images/thumb_boy.png" />
+            <img class="girl thumb_people" data-type="girl" src="./images/thumb_girl.png" />
+            <img class="man thumb_people" data-type="man" src="./images/thumb_man.png" />
+            <img class="woman thumb_people" data-type="woman" src="./images/thumb_woman.png" />
+            <img class="oldman thumb_people" data-type="oldman" src="./images/thumb_oldman.png" />
+            <img class="oldwoman thumb_people" data-type="oldwoman" src="./images/thumb_oldwoman.png" />
+        </div>
+        <!--道具-->
+        <div class="tools_item_box tools_item_box_3 flex" style="display: none;">
+            <img class="cat thumb_prop" data-type="cat" src="./images/thumb_cat.png" />
+            <img class="dog thumb_prop" data-type="dog" src="./images/thumb_dog.png" />
+            <img class="telescope thumb_prop" data-type="telescope" src="./images/thumb_telescope.png" />
+            <img class="het thumb_prop" data-type="hat" src="./images/thumb_het.png" />
+            <img class="carmare thumb_prop" data-type="camera" src="./images/thumb_carmare.png" />
+            <img class="sunglasses thumb_prop" data-type="sunglasses" src="./images/thumb_sunglasses.png" />
+        </div>
+
+        <!--工具选项-->
+        <div class="tools_select_box flex">
+            <div class="tools_select_item active"></div>
+            <div class="tools_select_item"></div>
+            <div class="tools_select_item"></div>
+<!--            <div id="photo"></div>-->
+        </div>
+
+        <img class="btn_draw" style="display: none;" src="./images/btn_draw.png" />
+        <canvas id="canvas_result" style="display: none;" width="750" height="1206"></canvas>
+    </div>
+</div>
+
+<div class="page_result" style="display: none;">
+    <img class="poster" src="about:blank" />
+
+    <p class="btn_save">长按上方图片即可保存海报</p>
+    <div class="poster_tip fadeInUp_s">
+        听从内心的声音，马上出发  &gt;
+        <img class="poster_close" src="./images/poster_close_02.jpg" />
+    </div>
+
+</div>
+
+
+
+
+
+<script src="js/index.js"></script>
+</body>
+</html>

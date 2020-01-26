@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>&nbsp;</title>
+    <script>(function(doc,win){var docEl=doc.documentElement,resizeEvt='orientationchange'in window?'orientationchange':'resize',recalc=function(){var clientWidth=docEl.clientWidth;if(!clientWidth)return;docEl.style.fontSize=20*(clientWidth/375)+'px';if(window.innerHeight/window.innerWidth>1.8){document.body.className='isIphone'}else{document.body.className=''}};if(!doc.addEventListener)return;win.addEventListener(resizeEvt,recalc,false);doc.addEventListener('DOMContentLoaded',recalc,false)})(document,window);</script>
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/easeljs.js"></script>
+    <script src="./js/preloadjs.js"></script>
+    <script src="./js/soundjs.js"></script>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+<div id="preload" class="flex">加载中 <span id="loaded">0</span>%</div>
+<div class="page page_game">
+        <!--选歌-->
+        <div class="select_music_mask">
+            <div class="main_box">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!--<div class="swiper-slide">
+                            <img src="assets/music_img0.png" class="music_img" alt="">
+                            <div class="music_name">歌曲 <span>小熊猫</span></div>
+                            <div class="difficulty_wrap">
+                                <span>难度</span>
+                                <img src="assets/difficulty_star.png" class="difficulty_star" alt="">
+                            </div>
+                        </div>-->
+                    </div>
+                    <!-- 如果需要导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <img src="assets/btn_selected.png" class="btn_style btn_selected" alt="">
+                <img src="assets/btn_try.png" class=" btn_style btn_try" alt="">
+            </div>
+        </div>
+        <!-- 倒计时 -->
+        <div class="timeDown_wrap_mask">
+            <img src="./assets/3.png" class=" b_down_3 b_down" alt="">
+            <img src="./assets/2.png" class=" b_down_2 b_down" alt="">
+            <img src="./assets/1.png" class=" b_down_1 b_down" alt="">
+            <img src="./assets/0.png" class=" b_down_0 b_down" alt="">
+        </div>
+        <!--游戏信息-->
+        <div class="user_info_bg">
+            <div class="avatar_wrap">
+                <img src="assets/avatar.png" alt="">
+            </div>
+            <div class="info_wrap">
+                <img src="assets/clock.png" class="clock" alt="">
+                <div class="time_down">时间：<span></span></div>
+            </div>
+            <div class="info_wrap">
+                <img src="assets/star.png" class="star" alt="">
+                <div class="score">得分：<span>0</span></div>
+            </div>
+        </div>
+        <!--游戏主提-->
+<!--        <div id="restart" style="position: absolute;z-index: 222;">重新开始</div>-->
+        <canvas id="game" width="750" height="785"></canvas>
+    </div>
+    <script src="js/game.js"></script>
+</body>
+</html>
